@@ -401,4 +401,10 @@ template {
   font: 500 14px/18px "Inter", Helvetica, Arial, sans-serif;
   color: #151515;
   text-decoration: none;
+  -webkit-transition: opacity .5s;
+  transition: opacity .5s;
+}
+
+.header__link:hover {
+  opacity: .75;
 }
