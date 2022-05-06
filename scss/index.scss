@@ -29,3 +29,20 @@
 @import "../blocks/merks/__about/_merks__about";
 @import "../blocks/merks/__author/_merks__author";
 @import "../blocks/merks/__prof/_merks__prof";
+
+/* Roads */
+
+@import "../blocks/roads/_roads";
+@import "../blocks/roads/__title/_roads__title";
+@import "../blocks/roads/__subtitle/_roads__subtitle";
+
+/* Slider */
+@import "../blocks/slider/_slider";
+@import "../blocks/slider/__slides/_slider__slides";
+@import "../blocks/slider/__slide/_slider__slide";
+@import "../blocks/slider/__slide-image/_slider__slide-image";
+@import "../blocks/slider/__slide-sticker/_slider__slide-sticker";
+@import "../blocks/slider/__nav/_slider__nav";
+@import "../blocks/slider/__btn/_slider__btn";
+@import "../blocks/slider/__btn/_type/_slider__btn_type_prev";
+@import "../blocks/slider/__btn/_type/_slider__btn_type_next";
