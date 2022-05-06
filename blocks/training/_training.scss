@@ -1,0 +1,10 @@
+.training {
+  padding: 132px 120px 120px;
+  display: grid;
+  grid-template-rows: 107px 1fr 38px;
+  grid-template-areas:
+  "title image"
+  "subtitle image"
+  "list image";
+  justify-content: space-between;
+}
