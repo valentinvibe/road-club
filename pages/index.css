@@ -487,3 +487,47 @@ template {
   -o-object-fit: contain;
      object-fit: contain;
 }
+
+/* Merks */
+.merks {
+  padding: 120px 120px 60px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-column-gap: 80px;
+          column-gap: 80px;
+}
+
+.merks__image {
+  width: 650px;
+  height: 460px;
+}
+
+.merks__content-container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.merks__title {
+  margin: 0;
+  font: 600 34px/44px "Inter", Helvetica, Arial, sans-serif;
+}
+
+.merks__author {
+  margin: 0;
+  font: 500 20px/32px "Inter", Helvetica, Arial, sans-serif;
+}
+
+.merks__prof {
+  font: 400 16px/28px "Inter", Helvetica, Arial, sans-serif;
+  color: rgba(34, 34, 34, 0.7);
+  margin: 0;
+}
