@@ -1,0 +1,15 @@
+.form__input {
+  font: $form-input;
+  width: 360px;
+  background-color: transparent;
+  border: 1px solid rgba(199, 199, 199, 0.5);
+  box-sizing: border-box;
+  border-radius: 4px;
+  padding-top: 11px;
+  padding-bottom: 11px;
+  padding-left: 20px;
+}
+
+.form__input::placeholder {
+
+}

@@ -69,3 +69,20 @@
 @import "../blocks/training/__list/_training__list";
 @import "../blocks/training/__list-item/_training__list-item";
 @import "../blocks/training/__illustration/_training__illustration";
+
+/* Footer */
+
+@import "../blocks/footer/_footer";
+@import "../blocks/footer/_title/_footer_title";
+@import "../blocks/footer/__about-container/_footer__about-container";
+@import "../blocks/footer/__author/_footer__author";
+@import "../blocks/footer/__theme-switcher/_footer__theme-switcher";
+@import "../blocks/footer/__theme-icon/_footer__theme-icon";
+@import "../blocks/footer/__btn-switch/_footer__btn-switch";
+
+/* Form */
+
+@import "../blocks/form/_form";
+@import "../blocks/form/__input-container/_form__input-container";
+@import "../blocks/form/__input/_form__input";
+@import "../blocks/form/__submit-btn/_form__submit-btn";
