@@ -44,8 +44,7 @@ h1 {
  * 2. Show the overflow in Edge and IE.
  */
 hr {
-  -webkit-box-sizing: content-box;
-          box-sizing: content-box;
+  box-sizing: content-box;
   /* 1 */
   height: 0;
   /* 1 */
@@ -82,8 +81,7 @@ abbr[title] {
   /* 1 */
   text-decoration: underline;
   /* 2 */
-  -webkit-text-decoration: underline dotted;
-          text-decoration: underline dotted;
+  text-decoration: underline dotted;
   /* 2 */
 }
 
@@ -189,9 +187,9 @@ select {
  * Correct the inability to style clickable types in iOS and Safari.
  */
 button,
-[type="button"],
-[type="reset"],
-[type="submit"] {
+[type=button],
+[type=reset],
+[type=submit] {
   -webkit-appearance: button;
 }
 
@@ -199,9 +197,9 @@ button,
  * Remove the inner border and padding in Firefox.
  */
 button::-moz-focus-inner,
-[type="button"]::-moz-focus-inner,
-[type="reset"]::-moz-focus-inner,
-[type="submit"]::-moz-focus-inner {
+[type=button]::-moz-focus-inner,
+[type=reset]::-moz-focus-inner,
+[type=submit]::-moz-focus-inner {
   border-style: none;
   padding: 0;
 }
@@ -210,9 +208,9 @@ button::-moz-focus-inner,
  * Restore the focus styles unset by the previous rule.
  */
 button:-moz-focusring,
-[type="button"]:-moz-focusring,
-[type="reset"]:-moz-focusring,
-[type="submit"]:-moz-focusring {
+[type=button]:-moz-focusring,
+[type=reset]:-moz-focusring,
+[type=submit]:-moz-focusring {
   outline: 1px dotted ButtonText;
 }
 
@@ -230,8 +228,7 @@ fieldset {
  *    `fieldset` elements in all browsers.
  */
 legend {
-  -webkit-box-sizing: border-box;
-          box-sizing: border-box;
+  box-sizing: border-box;
   /* 1 */
   color: inherit;
   /* 2 */
@@ -263,10 +260,9 @@ textarea {
  * 1. Add the correct box sizing in IE 10.
  * 2. Remove the padding in IE 10.
  */
-[type="checkbox"],
-[type="radio"] {
-  -webkit-box-sizing: border-box;
-          box-sizing: border-box;
+[type=checkbox],
+[type=radio] {
+  box-sizing: border-box;
   /* 1 */
   padding: 0;
   /* 2 */
@@ -275,8 +271,8 @@ textarea {
 /**
  * Correct the cursor style of increment and decrement buttons in Chrome.
  */
-[type="number"]::-webkit-inner-spin-button,
-[type="number"]::-webkit-outer-spin-button {
+[type=number]::-webkit-inner-spin-button,
+[type=number]::-webkit-outer-spin-button {
   height: auto;
 }
 
@@ -284,7 +280,7 @@ textarea {
  * 1. Correct the odd appearance in Chrome and Safari.
  * 2. Correct the outline style in Safari.
  */
-[type="search"] {
+[type=search] {
   -webkit-appearance: textfield;
   /* 1 */
   outline-offset: -2px;
@@ -294,7 +290,7 @@ textarea {
 /**
  * Remove the inner padding in Chrome and Safari on macOS.
  */
-[type="search"]::-webkit-search-decoration {
+[type=search]::-webkit-search-decoration {
   -webkit-appearance: none;
 }
 
@@ -342,29 +338,25 @@ template {
 }
 
 @font-face {
-  font-family: 'Inter';
+  font-family: "Inter";
   src: url("../../vendor/fonts/Inter-Regular.woff2") format("woff2"), url("../../vendor/fonts/Inter-Regular.woff") format("woff");
   font-weight: 400;
 }
-
 @font-face {
-  font-family: 'Inter';
+  font-family: "Inter";
   src: url("../../vendor/fonts/Inter-Medium.woff2") format("woff2"), url("../../vendor/fonts/Inter-Medium.woff") format("woff");
   font-weight: 500;
 }
-
 @font-face {
-  font-family: 'Inter';
+  font-family: "Inter";
   src: url("../../vendor/fonts/Inter-SemiBold.woff2") format("woff2"), url("../../vendor/fonts/Inter-SemiBold.woff") format("woff");
   font-weight: 600;
 }
-
 @font-face {
-  font-family: 'Inter';
+  font-family: "Inter";
   src: url("../../vendor/fonts/Inter-Bold.woff2") format("woff2"), url("../../vendor/fonts/Inter-Bold.woff") format("woff");
   font-weight: 700;
 }
-
 /* Fonts */
 /* Colors */
 /* Decorates */
@@ -377,24 +369,15 @@ template {
 /* 1. Header */
 .header {
   min-height: 74px;
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -webkit-box-pack: end;
-      -ms-flex-pack: end;
-          justify-content: flex-end;
+  align-items: center;
+  justify-content: flex-end;
   padding-right: 120px;
 }
 
 .header__links {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-column-gap: 34px;
-          column-gap: 34px;
+  column-gap: 34px;
   list-style-type: none;
 }
 
@@ -402,19 +385,20 @@ template {
   font: 500 14px/18px "Inter", Helvetica, Arial, sans-serif;
   color: #151515;
   text-decoration: none;
-  -webkit-transition: opacity .5s;
-  transition: opacity .5s;
+  transition: opacity 0.5s;
 }
 
 .header__link:hover {
-  opacity: .75;
+  opacity: 0.75;
 }
 
 /* Description */
 .description {
-  padding: 0 0 0 120px;
+  padding: 0 0 79px 120px;
   min-height: 856px;
   position: relative;
+  display: flex;
+  box-sizing: border-box;
 }
 
 .description__title {
@@ -461,22 +445,25 @@ template {
 }
 
 .description__bike-fix {
+  position: sticky;
+  top: 347px;
+  bottom: 79px;
   width: 440px;
   height: 300px;
   background-color: #fff;
+  filter: drop-shadow(-20px 60px 220px rgba(0, 0, 0, 0.2));
   border-radius: 20px;
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  position: -webkit-sticky;
-  position: sticky;
-  right: 370px;
+  justify-content: center;
+  align-items: center;
+  z-index: 2;
+  margin-left: 50px;
+}
+
+.description__image {
+  border: 1px solid #000000;
+  filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
+  border-radius: 20px;
 }
 
 .description__illustration {
@@ -485,18 +472,14 @@ template {
   right: 0;
   width: 610px;
   height: 836;
-  -o-object-fit: contain;
-     object-fit: contain;
+  object-fit: contain;
 }
 
 /* Merks */
 .merks {
   padding: 120px 120px 60px;
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-column-gap: 80px;
-          column-gap: 80px;
+  column-gap: 80px;
 }
 
 .merks__image {
@@ -505,16 +488,9 @@ template {
 }
 
 .merks__content-container {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
+  flex-direction: column;
+  justify-content: space-between;
   padding-bottom: 5px;
 }
 
@@ -553,11 +529,8 @@ template {
 
 /* Slider */
 .slider__slides {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-column-gap: 40px;
-          column-gap: 40px;
+  column-gap: 40px;
   overflow-x: hidden;
 }
 
@@ -572,21 +545,14 @@ template {
   width: 100px;
   height: 40px;
   background-repeat: no-repeat;
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
   padding-left: 16px;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  align-items: center;
 }
 
 .slider__nav {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-column-gap: 20px;
-          column-gap: 20px;
+  column-gap: 20px;
   margin-top: 50px;
 }
 
@@ -607,12 +573,8 @@ template {
 }
 
 .bikes__header {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
+  justify-content: space-between;
 }
 
 .bikes__title {
@@ -622,12 +584,9 @@ template {
 }
 
 .header__nav {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
   list-style-type: none;
-  -webkit-column-gap: 40px;
-          column-gap: 40px;
+  column-gap: 40px;
   margin: 25px 0 0;
 }
 
@@ -643,23 +602,18 @@ template {
 
 .bikes__content {
   margin-top: 120px;
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-column-gap: 30px;
-          column-gap: 30px;
+  column-gap: 30px;
 }
 
 .bikes__image-container {
   background-color: #f4f4f4;
   width: 380px;
   height: 380px;
-  -webkit-filter: drop-shadow(0px 20px 140px rgba(0, 0, 0, 0.06));
-          filter: drop-shadow(0px 20px 140px rgba(0, 0, 0, 0.06));
+  filter: drop-shadow(0px 20px 140px rgba(0, 0, 0, 0.06));
   padding: 20px;
   border-radius: 20px;
-  -webkit-box-sizing: border-box;
-          box-sizing: border-box;
+  box-sizing: border-box;
 }
 
 .bikes__card-image {
@@ -676,21 +630,15 @@ template {
 /* Training */
 .training {
   padding: 132px 120px 120px;
-  display: -ms-grid;
   display: grid;
-  -ms-grid-rows: 107px 1fr 38px;
-      grid-template-rows: 107px 1fr 38px;
-      grid-template-areas: "title image" "subtitle image" "list image";
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
+  grid-template-rows: 107px 1fr 38px;
+  grid-template-areas: "title image" "subtitle image" "list image";
+  justify-content: space-between;
 }
 
 .training__title {
   font: 700 55px/60px "Inter", Helvetica, Arial, sans-serif;
   margin: 0;
-  -ms-grid-row: 1;
-  -ms-grid-column: 1;
   grid-area: title;
 }
 
@@ -698,38 +646,26 @@ template {
   font: 400 18px/28px "Inter", Helvetica, Arial, sans-serif;
   color: rgba(34, 34, 34, 0.7);
   max-width: 460px;
-  -ms-grid-row: 2;
-  -ms-grid-column: 1;
   grid-area: subtitle;
   margin: 0;
 }
 
 .training__list {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
   list-style-type: none;
-  -webkit-column-gap: 30px;
-          column-gap: 30px;
+  column-gap: 30px;
   padding-left: 0;
-  -ms-grid-row: 3;
-  -ms-grid-column: 1;
   grid-area: list;
 }
 
 .training__list-item {
   font: 600 18px/22px "Inter", Helvetica, Arial, sans-serif;
-  -ms-flex-item-align: center;
-      -ms-grid-row-align: center;
-      align-self: center;
+  align-self: center;
 }
 
 .training__illustration {
   width: 580px;
   height: 460px;
-  -ms-grid-row: 1;
-  -ms-grid-row-span: 3;
-  -ms-grid-column: 2;
   grid-area: image;
 }
 
@@ -747,15 +683,9 @@ template {
 
 .footer__about-container {
   margin: 84px 0 0;
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  justify-content: space-between;
+  align-items: center;
 }
 
 .footer__author {
@@ -765,14 +695,9 @@ template {
 }
 
 .footer__theme-switcher {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -webkit-column-gap: 22px;
-          column-gap: 22px;
+  align-items: center;
+  column-gap: 22px;
   margin-bottom: 17px;
 }
 
@@ -788,9 +713,7 @@ template {
 
 /* Form */
 .form {
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  align-items: center;
 }
 
 .form__input-container {
@@ -803,8 +726,7 @@ template {
   width: 360px;
   background-color: transparent;
   border: 1px solid rgba(199, 199, 199, 0.5);
-  -webkit-box-sizing: border-box;
-          box-sizing: border-box;
+  box-sizing: border-box;
   border-radius: 4px;
   padding-top: 11px;
   padding-bottom: 11px;

@@ -1,11 +1,15 @@
 .description__bike-fix {
+  position: sticky;
+  top: 347px;
+  bottom: 79px;
   width: 440px;
   height: 300px;
   background-color: #fff;
+  filter: drop-shadow(-20px 60px 220px rgba(0, 0, 0, 0.2));
   border-radius: $radius;
   display: flex;
   justify-content: center;
   align-items: center;
-  position: sticky;
-  right: 370px;
+  z-index: 2;
+  margin-left: 50px;
 }
