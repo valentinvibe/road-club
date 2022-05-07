@@ -1,0 +1,14 @@
+.description__paragraph {
+  font: $paragraph;
+}
+
+.description__paragraph::after {
+  content: "";
+  display: inline-block;
+  vertical-align: middle;
+  width: 132px;
+  height: 2px;
+  background-color: #D7D4D4;
+  position: relative;
+  right: -30px;
+}
