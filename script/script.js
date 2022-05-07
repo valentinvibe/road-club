@@ -39,43 +39,52 @@ const bikes = {
   highway: [
     {
       name: 'Cervelo Caledonia-5',
-      src: 'images/bikes/highway/cervelo.png'
+      image: 'images/bikes/highway/cervelo.png',
+      link: 'https://www.sigmasports.com/item/Cervelo/Caledonia-5-Ultegra-Disc-Road-Bike-2021/RDEN'
     },
     {
       name: 'Cannondale Systemsix Himod',
-      src: 'images/bikes/highway/cannondale.png'
+      image: 'images/bikes/highway/cannondale.png',
+      link: 'https://www.sigmasports.com/item/Cannondale/SystemSix-HiMOD-Ultegra-Di2-Disc-Road-Bike-2021/R82J'
     },
     {
       name: 'Trek Domane SL-7',
-      src: 'images/bikes/highway/trek.png'
+      image: 'images/bikes/highway/trek.png',
+      link: 'https://www.sigmasports.com/item/Trek/Domane-SL-7-Force-eTap-AXS-Disc-Road-Bike-2021/RULF'
     }
   ],
   grevel: [
     {
       name: 'Cervelo Aspero GRX 810',
-      src: 'images/bikes/grevel/cervelo.png'
+      image: 'images/bikes/grevel/cervelo.png',
+      link: 'https://www.sigmasports.com/item/Cervelo/Aspero-GRX-810-1x-Disc-Gravel-Bike-2021/RJDE'
     },
     {
       name: 'Specialized S-Works Diverge',
-      src: 'images/bikes/grevel/specialized.png'
+      image: 'images/bikes/grevel/specialized.png',
+      link: 'https://www.sigmasports.com/item/Specialized/S-Works-Diverge-Gravel-Bike-2020/NVJ9'
     },
     {
       name: 'Cannondale Topstone Lefty 3',
-      src: 'images/bikes/grevel/cannondale.png'
+      image: 'images/bikes/grevel/cannondale.png',
+      link: 'https://www.sigmasports.com/item/Cannondale/Topstone-Carbon-Lefty-3-Disc-Gravel-Road-Bike-2021/PUC8'
     }
   ],
   tt: [
     {
       name: 'Specialized S-Works Shiv',
-      src: 'images/bikes/tt/specialized.png'
+      image: 'images/bikes/tt/specialized.png',
+      link: 'https://www.sigmasports.com/item/Specialized/S-Works-Shiv-Disc-Limited-Edition-Triathlon-Bike-2019/K8P9'
     },
     {
       name: 'BMC Timemachine 01 ONE',
-      src: 'images/bikes/tt/bmc.png'
+      image: 'images/bikes/tt/bmc.png',
+      link: 'https://www.sigmasports.com/item/BMC/Timemachine-01-One-Force-Disc-TT-Triathlon-Bike-2021/S835'
     },
     {
       name: 'Cervelo P-Series',
-      src: 'images/bikes/tt/cervelo.png'
+      image: 'images/bikes/tt/cervelo.png',
+      link: 'https://www.sigmasports.com/item/Cervelo/P-Series-Ultegra-Di2-TT-Triathlon-Bike-2021/RM6Q'
     }
   ]
 };

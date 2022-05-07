@@ -573,6 +573,11 @@ template {
   border: none;
   cursor: pointer;
   font-size: 26px;
+  transition: opacity 0.1s;
+}
+
+.slider__btn:hover {
+  opacity: 0.6;
 }
 
 /* Bikes */
@@ -591,27 +596,42 @@ template {
   padding: 0;
 }
 
-.header__nav {
+.bikes__nav {
   display: flex;
   list-style-type: none;
   column-gap: 40px;
   margin: 25px 0 0;
 }
 
-.header__nav-item {
+.bikes__nav-item {
   font: 400 18px/28px "Inter", Helvetica, Arial, sans-serif;
   color: rgba(34, 34, 34, 0.7);
+  transition: opacity 0.3s;
 }
 
-.header__nav-item_active {
+.bikes__nav-item:hover {
+  cursor: pointer;
+  opacity: 0.6;
+}
+
+.bikes__nav-item_active {
   font: 600 18px/28px "Inter", Helvetica, Arial, sans-serif;
   color: #151515;
+}
+
+.bikes__nav-item_active:hover {
+  opacity: 0.75;
 }
 
 .bikes__content {
   margin-top: 120px;
   display: flex;
   column-gap: 30px;
+}
+
+.bikes__card {
+  text-decoration: none;
+  color: #151515;
 }
 
 .bikes__image-container {
@@ -622,6 +642,12 @@ template {
   padding: 20px;
   border-radius: 20px;
   box-sizing: border-box;
+  transition: filter 0.5s;
+}
+
+.bikes__image-container:hover {
+  filter: drop-shadow(0px 20px 140px rgba(0, 0, 0, 0.11));
+  cursor: pointer;
 }
 
 .bikes__card-image {
@@ -669,6 +695,16 @@ template {
 .training__list-item {
   font: 600 18px/22px "Inter", Helvetica, Arial, sans-serif;
   align-self: center;
+}
+
+.training__link {
+  text-decoration: none;
+  color: #151515;
+  transition: opacity 0.5s;
+}
+
+.training__link:hover {
+  opacity: 0.75;
 }
 
 .training__illustration {
@@ -741,10 +777,28 @@ template {
   padding-left: 20px;
 }
 
+.form__input:hover {
+  cursor: pointer;
+}
+
+.form__input:hover::placeholder {
+  color: #151515;
+}
+
+.form__input:focus::placeholder {
+  color: transparent;
+}
+
+.form__input:focus {
+  border-color: rgb(199, 199, 199);
+  outline: none;
+}
+
 .form__submit-btn {
   position: absolute;
   right: 22px;
-  top: 14px;
+  top: 11px;
   border: none;
   cursor: pointer;
+  font: 500 13px/28px "Inter", Helvetica, Arial, sans-serif;
 }

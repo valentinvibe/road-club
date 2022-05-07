@@ -7,4 +7,9 @@
   border: none;
   cursor: pointer;
   font-size: 26px;
+  transition: opacity .1s;
+}
+
+.slider__btn:hover {
+  opacity: .6;
 }
