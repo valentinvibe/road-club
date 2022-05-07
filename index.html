@@ -11,7 +11,8 @@
 </head>
 <body class="page">
   <header class="header">
-    <ul class="header__links">
+    <nav>
+      <ul class="header__links">
         <li>
           <a href="#" class="header__link">Покрытия и градиенты</a>
         </li>
@@ -21,7 +22,8 @@
         <li>
           <a href="#" class="header__link">Тренировки</a>
         </li>
-    </ul>
+      </ul>
+    </nav>
   </header>
 
    <main class="content">
@@ -95,31 +97,33 @@
       <section class="bikes">
         <div class="bikes__header">
           <h2 class="bikes__title">Велосипеды</h2>
-          <ul class="header__nav">
-            <li class="header__nav-item header__nav-item_active">Шоссе</li>
-            <li class="header__nav-item">Грэвел</li>
-            <li class="header__nav-item">TT</li>
+          <ul class="bikes__nav">
+            <li class="bikes__nav-item bikes__nav-item_active">Шоссе</li>
+            <li class="bikes__nav-item">Грэвел</li>
+            <li class="bikes__nav-item">TT</li>
           </ul>
         </div>
         <div class="bikes__content">
-          <div class="bikes__card">
+          <a href="" class="bikes__card">
             <div class="bikes__image-container">
               <img src="./images/bikes/highway/cannondale.png" alt="" class="bikes__card-image">
             </div>
             <p class="bikes__card-title">Cervelo Caledonia-5</p>
-          </div>
-          <div class="bikes__card">
+          </a>
+
+          <a href="" class="bikes__card">
             <div class="bikes__image-container">
               <img src="./images/bikes/highway/cannondale.png" alt="" class="bikes__card-image">
             </div>
             <p class="bikes__card-title">Cervelo Caledonia-5</p>
-          </div>
-          <div class="bikes__card">
+          </a>
+
+          <a href="" class="bikes__card">
             <div class="bikes__image-container">
               <img src="./images/bikes/highway/cannondale.png" alt="" class="bikes__card-image">
             </div>
             <p class="bikes__card-title">Cervelo Caledonia-5</p>
-          </div>
+          </a>
 
         </div>
 
@@ -129,8 +133,12 @@
         <h2 class="training__title">Тренировки</h2>
         <p class="training__subtitle">Чтобы найти маршрут для тренировки можно воспользоваться сервисом Komoot, а записать эти тренировки поможет приложение Strava, а также это приложение позволит построить тренировочный план.</p>
         <ul class="training__list">
-          <li class="training__list-item">Strava</li>
-          <li class="training__list-item">Komoot</li>
+          <li class="training__list-item">
+              <a href="https://www.strava.com" class="training__link" target="_blank">Strava</a>
+          </li>
+          <li class="training__list-item">
+            <a href="https://www.komoot.com" class="training__link" target="_blank">Komoot</a>
+          </li>
         </ul>
         <img src="images/training-illustration.png" alt="Дорога в лесу" class="training__illustration">
       </section>

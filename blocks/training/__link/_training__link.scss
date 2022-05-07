@@ -1,0 +1,9 @@
+.training__link {
+  text-decoration: none;
+  color: $color-primary;
+  transition: opacity .5s;
+}
+
+.training__link:hover {
+  opacity: .75;
+}
