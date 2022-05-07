@@ -1,11 +1,19 @@
 .description__btn {
-  background: $btn-bg;
+  background-size: 200% 100%;
+  background-image: linear-gradient(to right, $btn-bg 50%, $btn-bg-hover 50%);
+  background-position: 0 0;
   border: none;
   padding: 16px 10px;
   width: 180px;
   border-radius: 4px;
   font: $btn-text;
+  letter-spacing: 1px;
   color: $btn-text-color;
   cursor: pointer;
   margin-bottom: 151px;
+  transition: background-position 1s;
+}
+
+.description__btn:hover {
+  background-position: -100% 0;
 }
