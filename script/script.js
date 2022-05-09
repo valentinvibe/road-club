@@ -152,7 +152,6 @@ function slider(slides, prev, next) {
       showSlides(i);
     });
   });
-
 }
 
 slider(slides,prev,next);
@@ -215,8 +214,29 @@ function setLightTheme() {
       }
     });
   });
-
 }
+
+/* Form Submit */
+const form = document.querySelector('.form'),
+      input = form.querySelector('.form__input');
+      btnSubmit = form.querySelector('.form__submit-btn');
+
+input.addEventListener('input', () => {
+  if (input.value.length > 0) {
+    btnSubmit.style.display = 'block';
+  } else {
+    btnSubmit.style.display = 'none';
+  }
+});
+
+form.addEventListener('submit', (e) => {
+  e.preventDefault();
+  input.value = 'Круто!'
+  setTimeout(() => {
+    input.value = '';
+    btnSubmit.style.display = 'none';
+  }, 2000)
+});
 
 
 
