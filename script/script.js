@@ -21,7 +21,7 @@ const bikes = [
                     link: 'https://www.sigmasports.com/item/Trek/Domane-SL-7-Force-eTap-AXS-Disc-Road-Bike-2021/RULF'
                   }
                 ]
-              }, 
+              },
               grevel = {
                 title: 'Грэвел',
                 desc: 'Грэвел похож на шоссейный велосипед, но конструкция рамы немного отличается, и на нём стоят более широкие покрышки, всё для того чтобы проехать по лёгкому бездорожью.',
@@ -113,7 +113,7 @@ function slider(slides, prev, next) {
     // slide+1
     images[1].src = bikes[i-1].slide;
     images[1].alt = bikes[i-1].title;
-    
+
     stickers[0].style.display = 'flex';
     stickers[0].querySelector('.slider__sticker-image').src = bikes[slideIndex-1].sticker;
 
@@ -152,9 +152,72 @@ function slider(slides, prev, next) {
       showSlides(i);
     });
   });
-  
+
 }
 
 slider(slides,prev,next);
+
+/* Theme Dark Switch */
+
+const themeSwitcher = document.querySelector('.footer__btn-switch');
+const page = document.querySelector('.page');
+// const pageElements = document.querySelectorAll('*');
+
+function switchBtn(target) {
+  if ((target.classList.contains('switch')) || (target.closest('button').classList.contains('switch'))) {
+    themeSwitcher.classList.remove('switch');
+    themeSwitcher.classList.add('switch_off');
+    setLightTheme();
+    // page.classList.remove('page_theme_dark');
+  } else {
+    themeSwitcher.classList.remove('switch_off');
+    themeSwitcher.classList.add('switch');
+    setDarkTheme();
+    // page.classList.add('page_theme_dark');
+  }
+}
+
+themeSwitcher.addEventListener('click', (e) => {
+  switchBtn(e.target);
+});
+
+
+function setDarkTheme() {
+  const page = document.querySelector('.page');
+  page.classList.add('page_theme_dark');
+  const pageElements = page.querySelectorAll('*');
+  pageElements.forEach(element => {
+    if (element.classList.value.length > 0) {
+      let arr = element.classList;
+      arr.forEach(item => {
+        let a = `${item}_theme_dark`;
+        arr.add(a);
+      })
+    }
+  });
+}
+
+function setLightTheme() {
+  const page = document.querySelector('.page');
+  page.classList.remove('page_theme_dark');
+  const pageElements = page.querySelectorAll('*');
+  pageElements.forEach(element => {
+    let arr = element.classList;
+    arr.forEach(item => {
+      if (item.indexOf('_theme_dark') !== -1) {
+        arr.remove(item);
+      }
+    });
+    arr = element.classList;
+    arr.forEach(item => {
+      if (item.indexOf('_theme_dark') !== -1) {
+        arr.remove(item);
+      }
+    });
+  });
+
+}
+
+
 
 

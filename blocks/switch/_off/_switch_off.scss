@@ -1,0 +1,13 @@
+@keyframes switchOff {
+  0% {
+    padding-left: 22px;
+    background-color: #545454;
+  }
+  100% {
+    padding-left: 3px;
+  }
+}
+
+.switch_off {
+  animation: switchOff .6s ease-in-out forwards;
+}
