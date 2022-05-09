@@ -1,0 +1,14 @@
+.burger {
+  position: absolute;
+  right: 18px;
+  top: 13px;
+  width: 22px;
+  cursor: pointer;
+  display: none;
+}
+
+@media screen and (max-width: 560px) {
+  .burger {
+    display: block;
+  }
+}
