@@ -5,3 +5,10 @@
   justify-content: flex-end;
   padding-right: 120px;
 }
+
+@media screen and (max-width: 560px) {
+  .header {
+    padding: 0;
+    align-items: flex-start;
+  }
+}

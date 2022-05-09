@@ -9,9 +9,25 @@
 
 @import "../blocks/header/_header";
 @import "../blocks/header/__links/_header__links";
+@import "../blocks/header/__links/_mobile/_header__links_mobile";
 @import "../blocks/header/__link/_header__link";
+
+@import "../blocks/header/__mobile-menu/_header__mobile-menu";
+@import "../blocks/header/__mobile-menu/_active/_header__mobile-menu_active";
 /* Theme Dark */
 @import "../blocks/header/__link/_theme/_header__link_theme_dark";
+
+/* Burger Menu */
+@import "../blocks/burger/_burger";
+@import "../blocks/burger/__icon/_burger__icon";
+@import "../blocks/burger/__icon/_active/_burger__icon_active";
+
+/* Theme Switcher */
+@import "../blocks/theme-switcher/_theme-switcher";
+@import "../blocks/theme-switcher/__btn-switch/_theme-switcher__btn-switch";
+@import "../blocks/theme-switcher/__theme-icon/_theme-switcher__theme-icon";
+@import "../blocks/theme-switcher/_place/_theme-switcher_place_menu";
+
 
 /* Content */
 @import "../blocks/content/_content";
