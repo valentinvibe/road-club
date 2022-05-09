@@ -2,12 +2,29 @@
 @import "../vendor/fonts/_fonts";
 @import "../vendor/_vars";
 @import "../blocks/page/_page";
+/* Theme Dark*/
+@import "../blocks/page/_theme/_page_theme_dark";
 
 /* 1. Header */
 
 @import "../blocks/header/_header";
 @import "../blocks/header/__links/_header__links";
 @import "../blocks/header/__link/_header__link";
+/* Theme Dark */
+@import "../blocks/header/__link/_theme/_header__link_theme_dark";
+
+/* Content */
+@import "../blocks/content/_content";
+/* Theme Dark*/
+@import "../blocks/content/_theme/_content_theme_dark";
+
+/* Section Title*/
+@import "../blocks/section-title/_section-title";
+
+/* Section Description */
+@import "../blocks/section-description/_section-description";
+/* Theme Dark*/
+@import "../blocks/section-description/_theme/_section-description_theme_dark";
 
 /* Description */
 
@@ -19,6 +36,9 @@
 @import "../blocks/description/__bike-fix/_description__bike-fix";
 @import "../blocks/description/__image/_description__image";
 @import "../blocks/description/__illustration/_description__illustration";
+/* Theme Dark*/
+@import "../blocks/description/__image/_theme/_description__image_theme_dark";
+@import "../blocks/description/__paragraph/_theme/_description__paragraph_theme_dark";
 
 /* Merks */
 
@@ -29,6 +49,8 @@
 @import "../blocks/merks/__about/_merks__about";
 @import "../blocks/merks/__author/_merks__author";
 @import "../blocks/merks/__prof/_merks__prof";
+/* Theme Dark */
+@import "../blocks/merks/__prof/_theme/_merks__prof_theme_dark";
 
 /* Roads */
 
@@ -46,6 +68,8 @@
 @import "../blocks/slider/__btn/_slider__btn";
 @import "../blocks/slider/__btn/_type/_slider__btn_type_prev";
 @import "../blocks/slider/__btn/_type/_slider__btn_type_next";
+/* Theme Dark */
+@import "../blocks/slider/__btn/_theme/_slider__btn_theme_dark";
 
 /* Bikes */
 
@@ -60,6 +84,10 @@
 @import "../blocks/bikes/__image-container/_bikes__image-container";
 @import "../blocks/bikes/__card-image/_bikes__card-image";
 @import "../blocks/bikes/__card-title/_bikes__card-title";
+/* Theme Dark */
+@import "../blocks/bikes/__nav/_theme/_bikes__nav-item_theme_dark";
+@import "../blocks/bikes/__card-title/_theme/_bikes__card-title_theme_dark";
+
 
 /* Training */
 
@@ -70,6 +98,8 @@
 @import "../blocks/training/__list-item/_training__list-item";
 @import "../blocks/training/__link/training__link";
 @import "../blocks/training/__illustration/_training__illustration";
+/* Theme dark */
+@import "../blocks/training/__link/_theme/_training__link_theme_dark";
 
 /* Footer */
 
@@ -80,6 +110,10 @@
 @import "../blocks/footer/__theme-switcher/_footer__theme-switcher";
 @import "../blocks/footer/__theme-icon/_footer__theme-icon";
 @import "../blocks/footer/__btn-switch/_footer__btn-switch";
+@import "../blocks/switch/_switch";
+@import "../blocks/switch/_off/_switch_off";
+/* Theme Dark*/
+@import "../blocks/footer/_theme/_footer_theme_dark";
 
 /* Form */
 
@@ -87,3 +121,18 @@
 @import "../blocks/form/__input-container/_form__input-container";
 @import "../blocks/form/__input/_form__input";
 @import "../blocks/form/__submit-btn/_form__submit-btn";
+
+
+// :root {
+//   background: #333333;
+//   filter: invert(100%);
+// }
+
+// * {
+//   background-color: inherit;
+// }
+
+// img:not([src*=".svg", src*=".png"]), video {
+//   filter: invert(100%);
+// }
+
