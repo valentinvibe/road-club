@@ -70,6 +70,7 @@
 @import "../blocks/slider/__btn/_type/_slider__btn_type_next";
 /* Theme Dark */
 @import "../blocks/slider/__btn/_theme/_slider__btn_theme_dark";
+@import "../blocks/bikes/__image-container/_theme/_bikes__image-container_theme_dark";
 
 /* Bikes */
 
@@ -85,7 +86,7 @@
 @import "../blocks/bikes/__card-image/_bikes__card-image";
 @import "../blocks/bikes/__card-title/_bikes__card-title";
 /* Theme Dark */
-@import "../blocks/bikes/__nav/_theme/_bikes__nav-item_theme_dark";
+@import "../blocks/bikes/__nav-item/_theme/_bikes__nav-item_theme_dark";
 @import "../blocks/bikes/__card-title/_theme/_bikes__card-title_theme_dark";
 
 
@@ -121,18 +122,5 @@
 @import "../blocks/form/__input-container/_form__input-container";
 @import "../blocks/form/__input/_form__input";
 @import "../blocks/form/__submit-btn/_form__submit-btn";
-
-
-// :root {
-//   background: #333333;
-//   filter: invert(100%);
-// }
-
-// * {
-//   background-color: inherit;
-// }
-
-// img:not([src*=".svg", src*=".png"]), video {
-//   filter: invert(100%);
-// }
-
+/* Theme Dark */
+@import "../blocks/form/__input/_theme/_form__input_theme_dark";
