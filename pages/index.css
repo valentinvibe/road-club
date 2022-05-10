@@ -374,6 +374,12 @@ template {
   background: #f4f4f4;
 }
 
+@media screen and (max-width: 560px) {
+  .page {
+    max-width: 100%;
+  }
+}
+
 /* Theme Dark*/
 .page_theme_dark {
   background-color: #333;
@@ -470,7 +476,7 @@ template {
   transition: height 0.8s;
   position: fixed;
   top: 74px;
-  z-index: 2;
+  z-index: 4;
   background-color: #f4f4f4;
 }
 
@@ -593,7 +599,7 @@ template {
   background-color: #fff;
   border: none;
   width: 44px;
-  height: 24px;
+  height: 20px;
   border-radius: 40px;
   text-align: left;
   padding-top: 2px;
@@ -631,11 +637,25 @@ template {
   font: 700 55px/60px "Inter", Helvetica, Arial, sans-serif;
 }
 
+@media screen and (max-width: 1145px) {
+  .section-title {
+    font: 700 32px/40px "Inter", Helvetica, Arial, sans-serif;
+    width: 62%;
+  }
+}
+
 /* Section Description */
 .section-description {
   font: 400 18px/28px "Inter", Helvetica, Arial, sans-serif;
   color: rgba(34, 34, 34, 0.7);
   max-width: 460px;
+}
+
+@media screen and (max-width: 1145px) {
+  .section-description {
+    width: 100%;
+    font: 400 12px/18px "Inter", Helvetica, Arial, sans-serif;
+  }
 }
 
 /* Theme Dark*/
@@ -648,25 +668,65 @@ template {
   padding: 0 0 79px 120px;
   min-height: 856px;
   position: relative;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-rows: (min-content)[4];
+      grid-template-rows: repeat(4, -webkit-min-content);
+      grid-template-rows: repeat(4, min-content);
+  -ms-grid-columns: 460px auto;
+      grid-template-columns: 460px auto;
+      grid-template-areas: "title		bike-fix" "subtitle	bike-fix" "button		bike-fix" "paragraph	bike-fix";
+}
+
+@media screen and (max-width: 1145px) {
+  .description {
+    -ms-grid-columns: 100%;
+        grid-template-columns: 100%;
+    -ms-grid-rows: auto-fit;
+        grid-template-rows: auto-fit;
+        grid-template-areas: "title" "image" "bike-fix" "subtitle" "button";
+    padding: 40px 18px;
+  }
 }
 
 .description__title {
+  -ms-grid-row: 1;
+  -ms-grid-column: 1;
+  grid-area: title;
   margin: 0;
   max-width: 330px;
-  padding-top: 80px;
-  padding-bottom: 28px;
+  -ms-flex-item-align: center;
+      align-self: center;
+  margin: 83px 0 44px;
+  padding: 0;
+}
+
+@media screen and (max-width: 1145px) {
+  .description__title {
+    margin: 0 0 40px;
+  }
 }
 
 .description__subtitle {
+  -ms-grid-row: 2;
+  -ms-grid-column: 1;
+  grid-area: subtitle;
   margin-bottom: 53px;
+  margin-top: 0;
+}
+
+@media screen and (max-width: 560px) {
+  .description__subtitle {
+    margin-top: 40px;
+  }
 }
 
 .description__btn {
+  -ms-grid-row: 3;
+  -ms-grid-column: 1;
+  grid-area: button;
   background-size: 200% 100%;
   background-image: -webkit-gradient(linear, left top, right top, color-stop(50%, #24b47e), color-stop(50%, #319e75));
   background-image: linear-gradient(to right, #24b47e 50%, #319e75 50%);
@@ -688,6 +748,12 @@ template {
   background-position: -100% 0;
 }
 
+@media screen and (max-width: 560px) {
+  .description__btn {
+    width: 100%;
+  }
+}
+
 .description__paragraph {
   font: 400 18px/18px "Inter", Helvetica, Arial, sans-serif;
 }
@@ -703,7 +769,17 @@ template {
   right: -30px;
 }
 
+@media screen and (max-width: 1145px) {
+  .description__paragraph {
+    display: none;
+  }
+}
+
 .description__bike-fix {
+  -ms-grid-row: 1;
+  -ms-grid-row-span: 4;
+  -ms-grid-column: 2;
+  grid-area: bike-fix;
   position: -webkit-sticky;
   position: sticky;
   top: 347px;
@@ -728,6 +804,19 @@ template {
   background-color: #f4f4f4;
 }
 
+@media screen and (max-width: 560px) {
+  .description__bike-fix {
+    margin: 0;
+    height: auto;
+    width: 100%;
+    padding: 11px 27px;
+    position: absolute;
+    top: -236px;
+    left: -52px;
+    background-color: transparent;
+  }
+}
+
 .description__image {
   border: 1px solid #000000;
   -webkit-filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
@@ -735,7 +824,22 @@ template {
   border-radius: 20px;
 }
 
+@media screen and (max-width: 560px) {
+  .description__image {
+    width: 64%;
+    border: none;
+    -webkit-filter: none;
+            filter: none;
+    background-color: #f4f4f4;
+    padding: 11px 27px;
+  }
+}
+
 .description__illustration {
+  -ms-grid-row: 1;
+  -ms-grid-row-span: 3;
+  -ms-grid-column: 2;
+  grid-area: image;
   position: absolute;
   bottom: 0;
   right: 0;
@@ -743,6 +847,15 @@ template {
   height: 836;
   -o-object-fit: contain;
      object-fit: contain;
+}
+
+@media screen and (max-width: 1145px) {
+  .description__illustration {
+    position: relative;
+    width: 254px;
+    height: 348px;
+    justify-self: flex-end;
+  }
 }
 
 /* Theme Dark*/

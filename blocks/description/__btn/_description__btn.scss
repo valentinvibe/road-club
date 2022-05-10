@@ -1,4 +1,5 @@
 .description__btn {
+  grid-area: button;
   background-size: 200% 100%;
   background-image: linear-gradient(to right, $btn-bg 50%, $btn-bg-hover 50%);
   background-position: 0 0;
@@ -16,4 +17,10 @@
 
 .description__btn:hover {
   background-position: -100% 0;
+}
+
+@media screen and (max-width: 560px) {
+  .description__btn {
+    width: 100%;
+  }
 }

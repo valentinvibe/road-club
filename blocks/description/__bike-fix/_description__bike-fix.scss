@@ -1,4 +1,5 @@
 .description__bike-fix {
+  grid-area: bike-fix;
   position: sticky;
   top: 347px;
   bottom: 79px;
@@ -13,4 +14,18 @@
   z-index: 2;
   margin-left: 50px;
   background-color: $bg-color;
+}
+
+@media screen and (max-width:560px) {
+  .description__bike-fix {
+    margin: 0;
+    height: auto;
+    width: 100%;
+    padding: ((160px-138px)/2) ((234px-180px)/2);
+
+    position: absolute;
+    top: -236px;
+    left: -52px;
+    background-color: transparent;
+  }
 }

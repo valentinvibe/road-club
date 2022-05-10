@@ -1,6 +1,14 @@
 .description__title {
+  grid-area: title;
   margin: 0;
   max-width: 330px;
-  padding-top: 80px;
-  padding-bottom: 28px;
+  align-self: center;
+  margin: 83px 0 44px;
+  padding: 0;
+}
+
+@media screen and (max-width:1145px) {
+  .description__title {
+    margin: 0 0 40px;
+  }
 }
