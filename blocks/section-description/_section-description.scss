@@ -3,3 +3,10 @@
   color:$color-secondary;
   max-width: 460px;
 }
+
+@media screen and (max-width:1145px) {
+  .section-description {
+    width: 100%;
+    font: $text-main-mobile;
+  }
+}

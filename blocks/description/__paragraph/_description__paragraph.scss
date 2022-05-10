@@ -12,3 +12,9 @@
   position: relative;
   right: -30px;
 }
+
+@media screen and (max-width: 1145px) {
+  .description__paragraph {
+    display: none;
+  }
+}
