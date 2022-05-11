@@ -2,3 +2,9 @@
   background-color: $bg-footer;
   padding: 80px 120px 60px;
 }
+
+@media screen and (max-width:550px) {
+  .footer {
+    padding: 60px 18px 25px 18px;
+  }
+}

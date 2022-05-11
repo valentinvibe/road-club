@@ -2,3 +2,9 @@
   position: relative;
   width: 360px;
 }
+
+@media screen and (max-width:396px) {
+  .form__input-container {
+    width: 100%;
+  }
+}

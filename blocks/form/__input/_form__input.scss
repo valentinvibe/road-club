@@ -26,3 +26,9 @@
   border-color: rgb(199, 199, 199);
   outline: none;
 }
+
+@media screen and (max-width:396px) {
+  .form__input {
+    width: 100%;
+  }
+}
