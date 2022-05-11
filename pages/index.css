@@ -1045,11 +1045,25 @@ template {
   justify-content: space-between;
 }
 
+@media screen and (max-width: 1024px) {
+  .training {
+    padding: 40px 18px;
+    grid-template-areas: "title" "image" "subtitle" "list";
+    gap: 40px;
+    grid-template-rows: 40px 225px 73px 50px;
+  }
+}
 .training__title {
   margin: 0;
   grid-area: title;
 }
 
+@media screen and (max-width: 1024px) {
+  .training__title {
+    font: 700 32px/40px "Inter", Helvetica, Arial, sans-serif;
+    letter-spacing: -0.5px;
+  }
+}
 .training__subtitle {
   grid-area: subtitle;
   margin: 0;
@@ -1078,12 +1092,23 @@ template {
   opacity: 0.75;
 }
 
+@media screen and (max-width: 1024px) {
+  .training__link {
+    font: 600 14px/20px "Inter", Helvetica, Arial, sans-serif;
+  }
+}
 .training__illustration {
   width: 580px;
   height: 460px;
   grid-area: image;
 }
 
+@media screen and (max-width: 1024px) {
+  .training__illustration {
+    width: 100%;
+    height: 100%;
+  }
+}
 /* Theme dark */
 .training__link_theme_dark {
   color: #f4f4f4;
