@@ -2,3 +2,9 @@
   margin: 0;
   font: $merks-author;
 }
+
+@media screen and (max-width:1145px) {
+  .merks__author {
+    font: $merks-author-mobile;
+  }
+}
