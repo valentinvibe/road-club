@@ -7,3 +7,9 @@
 .training__link:hover {
   opacity: .75;
 }
+
+@media screen and (max-width: 1024px) {
+  .training__link {
+    font: $training-link;
+  }
+}
