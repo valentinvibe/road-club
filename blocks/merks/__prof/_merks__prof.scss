@@ -3,3 +3,10 @@
   color: $color-secondary;
   margin: 7px 0 0;
 }
+
+@media screen and (max-width:1145px) {
+  .merks__prof {
+    font: $merks-prof-mobile;
+    margin-top: 2px;
+  }
+}
