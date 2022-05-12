@@ -21,6 +21,7 @@
 @import "../blocks/burger/_burger";
 @import "../blocks/burger/__icon/_burger__icon";
 @import "../blocks/burger/__icon/_active/_burger__icon_active";
+@import "../blocks/burger/__icon/_theme/burger__icon_theme_dark";
 
 /* Theme Switcher */
 @import "../blocks/theme-switcher/_theme-switcher";
@@ -28,7 +29,6 @@
 @import "../blocks/theme-switcher/__theme-icon/_theme-switcher__theme-icon";
 @import "../blocks/theme-switcher/_place/_theme-switcher_place_menu";
 @import "../blocks/theme-switcher/_place/theme-switcher_place_footer";
-
 
 /* Content */
 @import "../blocks/content/_content";
@@ -125,11 +125,7 @@
 @import "../blocks/footer/_title/_footer_title";
 @import "../blocks/footer/__about-container/_footer__about-container";
 @import "../blocks/footer/__author/_footer__author";
-@import "../blocks/footer/__theme-switcher/_footer__theme-switcher";
-@import "../blocks/footer/__theme-icon/_footer__theme-icon";
-@import "../blocks/footer/__btn-switch/_footer__btn-switch";
 @import "../blocks/switch/_switch";
-@import "../blocks/switch/_off/_switch_off";
 @import "../blocks/footer/__logo/footer__logo";
 /* Theme Dark*/
 @import "../blocks/footer/_theme/_footer_theme_dark";

@@ -1,4 +1,5 @@
 .slider__slides {
+  grid-area: slider;
   display: flex;
   column-gap: 40px;
   overflow-x: hidden;
