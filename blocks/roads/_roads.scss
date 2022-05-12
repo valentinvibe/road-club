@@ -1,3 +1,14 @@
 .roads {
   padding: 60px 0 60px 120px;
 }
+
+@media screen and (max-width: 1145px) {
+  .roads {
+    display: grid;
+    grid-template-areas:
+    "title slider-nav"
+    "slider slider"
+    "subtitle subtitle";
+    padding: 80px 18px 40px;
+  }
+}

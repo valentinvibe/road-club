@@ -1,5 +1,12 @@
 .slider__slides {
+  grid-area: slider;
   display: flex;
   column-gap: 40px;
   overflow-x: hidden;
+}
+
+@media screen and (max-width: 1145px) {
+  .slider__slides {
+    gap: 0;
+  }
 }

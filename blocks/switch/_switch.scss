@@ -1,14 +1,7 @@
-@keyframes switch {
-  0% {
-    padding-left: 3px;
-  }
-
-  100% {
-    padding-left: 22px;
-    background-color: #545454;
-  }
+.switch, .switch::before {
+  background: $bg-btn-secondary;
 }
 
-.switch {
-  animation: switch .6s ease-in-out forwards;
+.switch::after {
+  left: 22px;
 }

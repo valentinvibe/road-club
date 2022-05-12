@@ -21,7 +21,7 @@
     margin: 0;
     height: auto;
     width: 100%;
-    padding: ((160px-138px)/2) ((234px-180px)/2);
+    padding: calc((160px - 138px)/2) calc((234px - 180px)/2);
 
     position: absolute;
     top: -137px;
