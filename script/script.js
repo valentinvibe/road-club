@@ -112,10 +112,12 @@ function slider(slides, prev, next) {
     images[0].src = bikes[slideIndex-1].slide;
     images[0].alt = bikes[slideIndex-1].title;
     // slide+1
-    
-    images[1].src = bikes[i-1].slide;
-    images[1].alt = bikes[i-1].title;
-    
+    let width = document.documentElement.clientWidth;
+
+    if (width > 1100) {
+      images[1].src = bikes[i-1].slide;
+      images[1].alt = bikes[i-1].title;
+    }
 
     stickers[0].style.display = 'flex';
     stickers[0].querySelector('.slider__sticker-image').src = bikes[slideIndex-1].sticker;
@@ -134,7 +136,7 @@ function slider(slides, prev, next) {
     })
 
   }
- 
+
   showSlides(slideIndex); //первый вызов
 
   function plusSlide(n) {

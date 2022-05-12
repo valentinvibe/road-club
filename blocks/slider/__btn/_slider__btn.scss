@@ -18,3 +18,11 @@
 .slider__btn:hover {
   opacity: .6;
 }
+
+@media screen and (max-width: 1145px) {
+  .slider__btn {
+    width: 24px;
+    height: 24px;
+    font-size: 14px;
+  }
+}
