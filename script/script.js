@@ -84,10 +84,6 @@ function slider(slides, prev, next) {
         container = document.querySelector('.slider__slides'),
         stickers = container.querySelectorAll('.slider__slide-sticker'),
         images = container.querySelectorAll('.slider__slide-image');
-        bikesNav = document.querySelectorAll('.bikes__nav-item'),
-        cards = document.querySelectorAll('.bikes__card_desktop');
-
-
 
   function showSlides(n) {
     let i = n + 1;
@@ -121,22 +117,6 @@ function slider(slides, prev, next) {
 
     stickers[0].style.display = 'flex';
     stickers[0].querySelector('.slider__sticker-image').src = bikes[slideIndex-1].sticker;
-
-    bikesNav.forEach(element => {
-      element.classList.remove('bikes__nav-item_active');
-    });
-
-    bikesNav[slideIndex-1].classList.add('bikes__nav-item_active');
-
-    if (width > 1145) {
-      cards.forEach((card,i) => {
-        card.querySelector('.bikes__card-title').textContent = bikes[slideIndex-1].models[i].name;
-        card.href = bikes[slideIndex-1].models[i].link;
-        card.querySelector('.bikes__card-image').src = bikes[slideIndex-1].models[i].image;
-        card.querySelector('.bikes__card-image').alt = bikes[slideIndex-1].models[i].name;
-      });
-    }
-
   }
 
   showSlides(slideIndex); //первый вызов
@@ -153,12 +133,6 @@ function slider(slides, prev, next) {
     plusSlide(1);
   });
 
-
-  document.querySelectorAll('.bikes__nav-item').forEach((item,i) => {
-    item.addEventListener('click', () => {
-      showSlides(i);
-    });
-  });
 }
 
 slider(slides,prev,next);
@@ -245,28 +219,43 @@ form.addEventListener('submit', (e) => {
 /* Burger Menu */
 const menuMobile = document.querySelector('.header__mobile-menu'),
       burgerIcon = document.querySelector('.burger__icon'),
-      links = menuMobile.querySelector('.header__links');
-      switcher = document.querySelector('.theme-switcher');
+      links = menuMobile.querySelector('.header__links'),
+      switcher = document.querySelector('.theme-switcher'),
+      bikesNav = document.querySelectorAll('.bikes__nav-item'),
+      cards = document.querySelectorAll('.bikes__card_desktop');
 
-document.querySelector('.burger').addEventListener('click', () => {
+function toggleBurger() {
   burgerIcon.classList.toggle('burger__icon_active');
   menuMobile.classList.toggle('header__mobile-menu_active');
   links.classList.toggle('header__links_mobile');
   switcher.classList.toggle('theme-switcher_place_menu');
+}
+
+document.querySelector('.burger').addEventListener('click', toggleBurger);
+
+menuMobile.addEventListener('click', (e) => {
+  if (e.target.closest('.header__mobile-menu_active') && e.target.classList.contains('header__link')) {
+    toggleBurger();
+  }
 });
 
+
 /* Select Bike Mobile */
-let width = document.documentElement.clientWidth;
+const width = document.documentElement.clientWidth;
+const selectBike = document.querySelector('.bikes__select-bikes'),
+      card = document.querySelector('.bikes__card'),
+      title = card.querySelector('.bikes__card-title');
 if (width < 1145) {
-  const selectBike = document.querySelector('.bikes__select-bikes'),
-        card = document.querySelector('.bikes__card');
-        card.querySelector('.bikes__card-image').src = bikes[0].models[0].image;
-        card.querySelector('.bikes__card-image').alt = bikes[0].models[0].name;
-        card.href = bikes[0].models[0].link;
+
+  card.querySelector('.bikes__card-image').src = bikes[0].models[0].image;
+  card.querySelector('.bikes__card-image').alt = bikes[0].models[0].name;
+  card.href = bikes[0].models[0].link;
+
 
   selectBike.addEventListener('change', () => {
     card.querySelector('.bikes__card-image').src = bikes[selectBike.value].models[0].image;
     card.querySelector('.bikes__card-image').alt = bikes[selectBike.value].models[0].name;
+    title.textContent = bikes[0].models[0].name;
     card.href = bikes[selectBike.value].models[0].link;
     inactiveDots();
     dots[0].classList.add('bikes__dot_active');
@@ -278,19 +267,49 @@ if (width < 1145) {
     dots.forEach(dot => {
       dot.classList.remove('bikes__dot_active');
     })
-  };
+  }
 
   dots.forEach((dot,i) => {
     dot.addEventListener('click', () => {
       card.querySelector('.bikes__card-image').src = bikes[selectBike.value].models[i].image;
       card.querySelector('.bikes__card-image').alt = bikes[selectBike.value].models[i].name;
+      title.textContent = bikes[selectBike.value].models[i].name;
       inactiveDots();
       dots[i].classList.add('bikes__dot_active');
     });
   });
 
-};
+}
 
+/* Bikes Menu Desktop */
 
+function setBikeMenuInactive() {
+  bikesNav.forEach(element => {
+    element.classList.remove('bikes__nav-item_active');
+  });
+}
+setBikeMenuInactive();
 
+cards.forEach((card,i) => {
+  card.querySelector('.bikes__card-title').textContent = bikes[0].models[i].name;
+  card.href = bikes[0].models[0].link;
+  card.querySelector('.bikes__card-image').src = bikes[0].models[i].image;
+  card.querySelector('.bikes__card-image').alt = bikes[0].models[i].name;
+});
 
+bikesNav[0].classList.add('bikes__nav-item_active');
+
+bikesNav.forEach((item,i) => {
+  item.addEventListener('click', () => {
+    setBikeMenuInactive();
+    bikesNav[item.value].classList.add('bikes__nav-item_active');
+
+    cards.forEach((card,i) => {
+      card.querySelector('.bikes__card-title').textContent = bikes[item.value].models[i].name;
+      card.href = bikes[item.value].models[i].link;
+      card.querySelector('.bikes__card-image').src = bikes[item.value].models[i].image;
+      card.querySelector('.bikes__card-image').alt = bikes[item.value].models[i].name;
+    })
+
+  });
+});
