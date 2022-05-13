@@ -3,3 +3,9 @@
   max-width: 229px;
   margin: 0 0 50px;
 }
+
+@media screen and (max-width:550px) {
+  .footer_title {
+    margin-bottom: 38px;
+  }
+}

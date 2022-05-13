@@ -713,7 +713,7 @@ template {
       grid-template-rows: repeat(4, min-content);
   -ms-grid-columns: 460px auto;
       grid-template-columns: 460px auto;
-      grid-template-areas: "title		bike-fix" "subtitle	bike-fix" "button		bike-fix" "paragraph	bike-fix";
+      grid-template-areas: "title		bike-fix" "subtitle	bike-fix" "button		bike-fix" "paragraph	bike-fix";
 }
 
 @media screen and (max-width: 980px) {
@@ -722,7 +722,7 @@ template {
         grid-template-columns: 100%;
     -ms-grid-rows: 120px 334px 12px 151px 50px;
         grid-template-rows: 120px 334px 12px 151px 50px;
-        grid-template-areas: "title" "image" "bike-fix" "subtitle" "button";
+        grid-template-areas: "title" "image" "bike-fix" "subtitle" "button";
     padding: 40px 18px;
     min-height: -webkit-fit-content;
     min-height: -moz-fit-content;
@@ -792,6 +792,12 @@ template {
     width: 100%;
     margin: 0;
     padding: 0;
+  }
+}
+
+@media screen and (min-width: 560px) and (max-width: 960px) {
+  .description__btn {
+    margin-bottom: 0;
   }
 }
 
@@ -873,7 +879,7 @@ template {
             filter: none;
     background-color: #f4f4f4;
     padding: 11px 27px;
-    max-width: 440px;
+    max-width: 234px;
   }
 }
 
@@ -1041,7 +1047,8 @@ template {
   .roads {
     display: -ms-grid;
     display: grid;
-    grid-auto-rows: 81px 174px 130px;
+    grid-auto-rows: 81px -webkit-max-content 130px;
+    grid-auto-rows: 81px max-content 130px;
         grid-template-areas: "title slider-nav" "slider slider" "subtitle subtitle";
     padding: 58px 18px 40px;
   }
@@ -1073,7 +1080,7 @@ template {
     -ms-grid-column-span: 2;
     grid-column: 1/3;
     max-width: 100%;
-    margin-top: 40px;
+    margin-top: 35px;
   }
 }
 
@@ -1207,7 +1214,7 @@ template {
 
 @media screen and (max-width: 880px) {
   .bikes {
-    padding: 80px 18px 40px;
+    padding: 65px 18px 79px;
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
@@ -1226,7 +1233,7 @@ template {
   .bikes::before {
     content: "";
     position: relative;
-    top: -40px;
+    top: -29px;
     left: 0;
     width: 100%;
     height: 1px;
@@ -1347,7 +1354,7 @@ template {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
-  margin-top: 20px;
+  margin-top: 15px;
   -webkit-column-gap: 5px;
           column-gap: 5px;
 }
@@ -1417,6 +1424,13 @@ template {
 .bikes__card-title {
   font: 600 18px/22px "Inter", Helvetica, Arial, sans-serif;
   padding-left: 7px;
+}
+
+@media screen and (max-width: 880px) {
+  .bikes__card-title {
+    font-size: 14px;
+    margin: 0 auto 0 45px;
+  }
 }
 
 /* Theme Dark */
@@ -1554,7 +1568,7 @@ template {
 
 @media screen and (max-width: 550px) {
   .footer {
-    padding: 60px 18px 25px 18px;
+    padding: 68px 18px 25px 18px;
   }
 }
 
@@ -1562,6 +1576,12 @@ template {
   font: 600 24px/32px "Inter", Helvetica, Arial, sans-serif;
   max-width: 229px;
   margin: 0 0 50px;
+}
+
+@media screen and (max-width: 550px) {
+  .footer_title {
+    margin-bottom: 38px;
+  }
 }
 
 .footer__about-container {
@@ -1586,6 +1606,7 @@ template {
 @media screen and (max-width: 560px) {
   .footer__author {
     font: 500 14px/20px "Inter", Helvetica, Arial, sans-serif;
+    margin-top: 11px;
   }
 }
 
@@ -1600,6 +1621,7 @@ template {
 .footer__logo {
   width: 38px;
   height: 38px;
+  margin-top: 5px;
 }
 
 @media screen and (min-width: 560px) {
