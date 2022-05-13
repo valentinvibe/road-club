@@ -4,7 +4,7 @@
   border-radius: $radius;
 }
 
-@media screen and (max-width:560px) {
+@media screen and (max-width:982px) {
   .description__image {
     width: 64%;
     border: none;
@@ -12,5 +12,6 @@
 
     background-color: $bg-color;
     padding: 11px 27px;
+    max-width: 440px;
   }
 }

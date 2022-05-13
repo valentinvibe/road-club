@@ -1,0 +1,14 @@
+.bikes__select-bikes {
+  margin: 40px auto 20px 0;
+  width: 114px;
+  height: 30px;
+  border: 1px solid $border-section;
+  padding: 8px 7px;
+  font: $bikes-select;
+  border-radius: 2px;
+  background-color: transparent;
+}
+
+.bikes__select-bikes:focus {
+  outline: none;
+}

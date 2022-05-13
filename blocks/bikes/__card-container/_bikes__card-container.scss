@@ -1,0 +1,9 @@
+.bikes__card-container {
+  display: none;
+}
+
+@media screen and (max-width: 880px) {
+  .bikes__card-container {
+    display: block;
+  }
+}

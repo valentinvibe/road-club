@@ -3,3 +3,9 @@
   display: flex;
   column-gap: 30px;
 }
+
+@media screen and (max-width:1330px) {
+  .bikes__content {
+    display: none;
+  }
+}

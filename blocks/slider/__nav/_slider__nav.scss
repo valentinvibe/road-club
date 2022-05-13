@@ -8,9 +8,9 @@
 @media screen and (max-width: 1145px) {
   .slider__nav {
     margin: 0;
-    margin-right: 9px;
     align-self: flex-start;
     justify-self: flex-end;
-    margin-top: 10px;
+    margin-top: 9px;
+    column-gap: 11px;
   }
 }

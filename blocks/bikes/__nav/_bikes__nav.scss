@@ -4,3 +4,9 @@
   column-gap: 40px;
   margin: 25px 0 0;
 }
+
+@media screen and (max-width:880px) {
+  .bikes__nav {
+    display: none;
+  }
+}
