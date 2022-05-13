@@ -98,6 +98,11 @@
 @import "../blocks/bikes/__nav-item/_bikes__nav-item";
 @import "../blocks/bikes/__nav-item/_active/_bikes__nav-item_active";
 @import "../blocks/bikes/__content/_bikes__content";
+@import "../blocks/bikes/__card-container/_bikes__card-container";
+@import "../blocks/bikes/__select-bikes/_bikes__select-bikes";
+@import "../blocks/bikes/__dots/_bikes__dots";
+@import "../blocks/bikes/__dot/_bikes__dot";
+@import "../blocks/bikes/__dot/_active/_bikes__dot_active";
 @import "../blocks/bikes/__card/_bikes__card";
 @import "../blocks/bikes/__image-container/_bikes__image-container";
 @import "../blocks/bikes/__card-image/_bikes__card-image";
@@ -105,6 +110,7 @@
 /* Theme Dark */
 @import "../blocks/bikes/__nav-item/_theme/_bikes__nav-item_theme_dark";
 @import "../blocks/bikes/__card-title/_theme/_bikes__card-title_theme_dark";
+@import "../blocks/bikes/__select-bikes/_theme/_bikes__select-bikes_theme_dark";
 
 
 /* Training */

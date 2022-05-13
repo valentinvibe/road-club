@@ -85,7 +85,7 @@ function slider(slides, prev, next) {
         stickers = container.querySelectorAll('.slider__slide-sticker'),
         images = container.querySelectorAll('.slider__slide-image');
         bikesNav = document.querySelectorAll('.bikes__nav-item'),
-        cards = document.querySelectorAll('.bikes__card');
+        cards = document.querySelectorAll('.bikes__card_desktop');
 
 
 
@@ -128,12 +128,14 @@ function slider(slides, prev, next) {
 
     bikesNav[slideIndex-1].classList.add('bikes__nav-item_active');
 
-    cards.forEach((card,i) => {
-      card.href = bikes[slideIndex-1].models[i].link;
-      card.querySelector('.bikes__card-image').src = bikes[slideIndex-1].models[i].image;
-      card.querySelector('.bikes__card-image').alt = bikes[slideIndex-1].models[i].name;
-      card.querySelector('.bikes__card-title').textContent = bikes[slideIndex-1].models[i].name;
-    })
+    if (width > 1145) {
+      cards.forEach((card,i) => {
+        card.querySelector('.bikes__card-title').textContent = bikes[slideIndex-1].models[i].name;
+        card.href = bikes[slideIndex-1].models[i].link;
+        card.querySelector('.bikes__card-image').src = bikes[slideIndex-1].models[i].image;
+        card.querySelector('.bikes__card-image').alt = bikes[slideIndex-1].models[i].name;
+      });
+    }
 
   }
 
@@ -141,15 +143,15 @@ function slider(slides, prev, next) {
 
   function plusSlide(n) {
     showSlides(slideIndex += n);
-  }
+  };
 
   prevBtn.addEventListener('click', () => {
     plusSlide(-1);
-  })
+  });
 
   nextBtn.addEventListener('click', () => {
     plusSlide(1);
-  })
+  });
 
 
   document.querySelectorAll('.bikes__nav-item').forEach((item,i) => {
@@ -179,7 +181,7 @@ themeSwitchers.forEach(switcher => {
   switcher.addEventListener('click', (e) => {
     switchBtn(switcher,e.target);
   });
-})
+});
 
 
 
@@ -251,4 +253,113 @@ document.querySelector('.burger').addEventListener('click', () => {
   menuMobile.classList.toggle('header__mobile-menu_active');
   links.classList.toggle('header__links_mobile');
   switcher.classList.toggle('theme-switcher_place_menu');
-})
+});
+
+/* Select Bike Mobile */
+let width = document.documentElement.clientWidth;
+if (width < 1145) {
+  const selectBike = document.querySelector('.bikes__select-bikes'),
+        card = document.querySelector('.bikes__card');
+        card.querySelector('.bikes__card-image').src = bikes[0].models[0].image;
+        card.querySelector('.bikes__card-image').alt = bikes[0].models[0].name;
+        card.href = bikes[0].models[0].link;
+
+  selectBike.addEventListener('change', () => {
+    card.querySelector('.bikes__card-image').src = bikes[selectBike.value].models[0].image;
+    card.querySelector('.bikes__card-image').alt = bikes[selectBike.value].models[0].name;
+    card.href = bikes[selectBike.value].models[0].link;
+    inactiveDots();
+    dots[0].classList.add('bikes__dot_active');
+  });
+
+  const dots = document.querySelectorAll('.bikes__dot');
+
+  function inactiveDots() {
+    dots.forEach(dot => {
+      dot.classList.remove('bikes__dot_active');
+    })
+  };
+
+  dots.forEach((dot,i) => {
+    dot.addEventListener('click', () => {
+      card.querySelector('.bikes__card-image').src = bikes[selectBike.value].models[i].image;
+      card.querySelector('.bikes__card-image').alt = bikes[selectBike.value].models[i].name;
+      inactiveDots();
+      dots[i].classList.add('bikes__dot_active');
+    });
+  });
+
+//////////////////////////////////////////////////////////////////////////////////////////////
+getEvent = function() {
+  return event.type.search('touch') !== -1 ? event.touches[0] : event;
+  // p.s. event - аргумент по умолчанию в функции
+},
+// или es6
+getEvent = () => event.type.search('touch') !== -1 ? event.touches[0] : event,
+
+swipeStart = function() {
+  let evt = getEvent();
+
+  // берем начальную позицию курсора по оси Х
+  posInit = posX1 = evt.clientX;
+
+  // убираем плавный переход, чтобы track двигался за курсором без задержки
+  // т.к. он будет включается в функции slide()
+  sliderTrack.style.transition = '';
+
+  // и сразу начинаем отслеживать другие события на документе
+  document.addEventListener('touchmove', swipeAction);
+  document.addEventListener('touchend', swipeEnd);
+  document.addEventListener('mousemove', swipeAction);
+  document.addEventListener('mouseup', swipeEnd);
+},
+swipeAction = function() {
+  let evt = getEvent(),
+    // для более красивой записи возьмем в переменную текущее свойство transform
+    style = sliderTrack.style.transform,
+    // считываем трансформацию с помощью регулярного выражения и сразу превращаем в число
+    transform = +style.match(trfRegExp)[0];
+
+  posX2 = posX1 - evt.clientX;
+  posX1 = evt.clientX;
+
+  sliderTrack.style.transform = `translate3d(${transform - posX2}px, 0px, 0px)`;
+  // можно было бы использовать метод строк .replace():
+  // sliderTrack.style.transform = style.replace(trfRegExp, match => match - posX2);
+  // но в дальнейшем нам нужна будет текущая трансформация в переменной
+}
+swipeEnd = function() {
+  // финальная позиция курсора
+  posFinal = posInit - posX1;
+
+  document.removeEventListener('touchmove', swipeAction);
+  document.removeEventListener('mousemove', swipeAction);
+  document.removeEventListener('touchend', swipeEnd);
+  document.removeEventListener('mouseup', swipeEnd);
+
+  // убираем знак минус и сравниваем с порогом сдвига слайда
+  if (Math.abs(posFinal) > posThreshold) {
+    // если мы тянули вправо, то уменьшаем номер текущего слайда
+    if (posInit < posX1) {
+      slideIndex--;
+      console.log(-1)
+    // если мы тянули влево, то увеличиваем номер текущего слайда
+    } else if (posInit > posX1) {
+      slideIndex++;
+      console.log(1)
+    }
+  }
+
+  // если курсор двигался, то запускаем функцию переключения слайдов
+  if (posInit !== posX1) {
+    slide();
+  }
+
+};
+//////////////////////////////////////////////////////////////////////////////////////////////
+
+};
+
+
+
+

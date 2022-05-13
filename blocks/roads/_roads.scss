@@ -5,10 +5,11 @@
 @media screen and (max-width: 1145px) {
   .roads {
     display: grid;
+    grid-auto-rows: 81px 174px 130px;
     grid-template-areas:
     "title slider-nav"
     "slider slider"
     "subtitle subtitle";
-    padding: 80px 18px 40px;
+    padding: 58px 18px 40px;
   }
 }
