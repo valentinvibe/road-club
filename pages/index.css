@@ -1049,7 +1049,7 @@ template {
     display: grid;
     grid-auto-rows: 81px -webkit-max-content 130px;
     grid-auto-rows: 81px max-content 130px;
-        grid-template-areas: "title slider-nav" "slider slider" "subtitle subtitle";
+        grid-template-areas: "title slider-nav" "slider slider" "subtitle subtitle";
     padding: 58px 18px 40px;
   }
 }
@@ -1403,7 +1403,6 @@ template {
     height: 100%;
     margin: 0;
     max-width: 380px;
-    max-height: 380px;
   }
 }
 
@@ -1429,7 +1428,8 @@ template {
 @media screen and (max-width: 880px) {
   .bikes__card-title {
     font-size: 14px;
-    margin: 0 auto 0 45px;
+    margin: 0 auto;
+    text-align: center;
   }
 }
 
