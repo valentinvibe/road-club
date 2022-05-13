@@ -111,8 +111,11 @@ function slider(slides, prev, next) {
     let width = document.documentElement.clientWidth;
 
     if (width > 1100) {
+      images[1].style.display = 'flex';
       images[1].src = bikes[i-1].slide;
       images[1].alt = bikes[i-1].title;
+    } else {
+      images[1].style.display = 'none';
     }
 
     stickers[0].style.display = 'flex';
@@ -241,45 +244,49 @@ menuMobile.addEventListener('click', (e) => {
 
 
 /* Select Bike Mobile */
-const width = document.documentElement.clientWidth;
-const selectBike = document.querySelector('.bikes__select-bikes'),
-      card = document.querySelector('.bikes__card'),
-      title = card.querySelector('.bikes__card-title');
-if (width < 1145) {
+function setBikeMobileMenu() {
+  let width = document.documentElement.clientWidth;
+  const selectBike = document.querySelector('.bikes__select-bikes'),
+        card = document.querySelector('.bikes__card'),
+        title = card.querySelector('.bikes__card-title');
 
-  card.querySelector('.bikes__card-image').src = bikes[0].models[0].image;
-  card.querySelector('.bikes__card-image').alt = bikes[0].models[0].name;
-  card.href = bikes[0].models[0].link;
+  if (width < 1145) {
+
+    card.querySelector('.bikes__card-image').src = bikes[0].models[0].image;
+    card.querySelector('.bikes__card-image').alt = bikes[0].models[0].name;
+    card.href = bikes[0].models[0].link;
 
 
-  selectBike.addEventListener('change', () => {
-    card.querySelector('.bikes__card-image').src = bikes[selectBike.value].models[0].image;
-    card.querySelector('.bikes__card-image').alt = bikes[selectBike.value].models[0].name;
-    title.textContent = bikes[0].models[0].name;
-    card.href = bikes[selectBike.value].models[0].link;
-    inactiveDots();
-    dots[0].classList.add('bikes__dot_active');
-  });
-
-  const dots = document.querySelectorAll('.bikes__dot');
-
-  function inactiveDots() {
-    dots.forEach(dot => {
-      dot.classList.remove('bikes__dot_active');
-    })
-  }
-
-  dots.forEach((dot,i) => {
-    dot.addEventListener('click', () => {
-      card.querySelector('.bikes__card-image').src = bikes[selectBike.value].models[i].image;
-      card.querySelector('.bikes__card-image').alt = bikes[selectBike.value].models[i].name;
-      title.textContent = bikes[selectBike.value].models[i].name;
+    selectBike.addEventListener('change', () => {
+      card.querySelector('.bikes__card-image').src = bikes[selectBike.value].models[0].image;
+      card.querySelector('.bikes__card-image').alt = bikes[selectBike.value].models[0].name;
+      title.textContent = bikes[0].models[0].name;
+      card.href = bikes[selectBike.value].models[0].link;
       inactiveDots();
-      dots[i].classList.add('bikes__dot_active');
+      dots[0].classList.add('bikes__dot_active');
     });
-  });
 
+    const dots = document.querySelectorAll('.bikes__dot');
+
+    function inactiveDots() {
+      dots.forEach(dot => {
+        dot.classList.remove('bikes__dot_active');
+      })
+    }
+
+    dots.forEach((dot,i) => {
+      dot.addEventListener('click', () => {
+        card.querySelector('.bikes__card-image').src = bikes[selectBike.value].models[i].image;
+        card.querySelector('.bikes__card-image').alt = bikes[selectBike.value].models[i].name;
+        title.textContent = bikes[selectBike.value].models[i].name;
+        inactiveDots();
+        dots[i].classList.add('bikes__dot_active');
+      });
+    });
+
+  }
 }
+setBikeMobileMenu();
 
 /* Bikes Menu Desktop */
 
@@ -313,3 +320,8 @@ bikesNav.forEach((item,i) => {
 
   });
 });
+
+window.addEventListener('resize', () => {
+  slider(slides,prev,next);
+  setBikeMobileMenu();
+})
