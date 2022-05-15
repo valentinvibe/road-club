@@ -368,6 +368,7 @@ template {
 /* Fonts */
 /* Colors */
 /* Decorates */
+/* Mixins */
 .page {
   max-width: 1440px;
   margin: auto;
@@ -392,12 +393,12 @@ template {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
   -webkit-box-pack: end;
       -ms-flex-pack: end;
           justify-content: flex-end;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
   padding-right: 120px;
 }
 
@@ -489,7 +490,7 @@ template {
 }
 
 .header__mobile-menu_active {
-  height: 560px;
+  min-height: 560px;
   padding-top: 70px;
   padding-left: 55px;
   padding-right: 55px;
@@ -497,8 +498,16 @@ template {
 }
 
 /* Theme Dark */
+.header__link_theme_dark {
+  color: inherit;
+}
+
 .header__link_theme_dark:hover {
   opacity: .65;
+}
+
+.header__mobile-menu_theme_dark {
+  background-color: #333;
 }
 
 /* Burger Menu */
@@ -587,14 +596,14 @@ template {
 /* Theme Switcher */
 .theme-switcher {
   display: none;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
   -webkit-column-gap: 22px;
           column-gap: 22px;
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
 
 .theme-switcher__btn-switch {
@@ -610,6 +619,7 @@ template {
   cursor: pointer;
   position: relative;
   border-radius: 16px;
+  display: block;
 }
 
 .theme-switcher__theme-icon::before {
@@ -713,16 +723,16 @@ template {
       grid-template-rows: repeat(4, min-content);
   -ms-grid-columns: 460px auto;
       grid-template-columns: 460px auto;
-      grid-template-areas: "title		bike-fix" "subtitle	bike-fix" "button		bike-fix" "paragraph	bike-fix";
+      grid-template-areas: "title		bike-fix" "subtitle	bike-fix" "button		bike-fix" "paragraph	bike-fix";
 }
 
-@media screen and (max-width: 980px) {
+@media screen and (max-width: 1000px) {
   .description {
     -ms-grid-columns: 100%;
         grid-template-columns: 100%;
     -ms-grid-rows: 120px 334px 12px 151px 50px;
         grid-template-rows: 120px 334px 12px 151px 50px;
-        grid-template-areas: "title" "image" "bike-fix" "subtitle" "button";
+        grid-template-areas: "title" "image" "bike-fix" "subtitle" "button";
     padding: 40px 18px;
     min-height: -webkit-fit-content;
     min-height: -moz-fit-content;
@@ -762,6 +772,12 @@ template {
   }
 }
 
+@media screen and (min-width: 1000px) and (max-width: 1145px) {
+  .description__subtitle {
+    max-width: 260px;
+  }
+}
+
 .description__btn {
   -ms-grid-row: 3;
   -ms-grid-column: 1;
@@ -795,7 +811,7 @@ template {
   }
 }
 
-@media screen and (min-width: 560px) and (max-width: 960px) {
+@media screen and (min-width: 560px) and (max-width: 1000px) {
   .description__btn {
     margin-bottom: 0;
   }
@@ -836,6 +852,8 @@ template {
   background-color: #fff;
   -webkit-filter: drop-shadow(-20px 60px 220px rgba(0, 0, 0, 0.2));
           filter: drop-shadow(-20px 60px 220px rgba(0, 0, 0, 0.2));
+  -webkit-box-shadow: -20px 60px 220px rgba(0, 0, 0, 0.44);
+          box-shadow: -20px 60px 220px rgba(0, 0, 0, 0.44);
   border-radius: 20px;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -854,7 +872,7 @@ template {
 @media screen and (max-width: 1000px) {
   .description__bike-fix {
     margin: 0;
-    height: auto;
+    height: 0;
     width: 100%;
     padding: calc((160px - 138px)/2) calc((234px - 180px)/2);
     position: absolute;
@@ -871,7 +889,7 @@ template {
   border-radius: 20px;
 }
 
-@media screen and (max-width: 982px) {
+@media screen and (max-width: 1000px) {
   .description__image {
     width: 64%;
     border: none;
@@ -892,7 +910,7 @@ template {
   bottom: 0;
   right: 0;
   width: 610px;
-  height: 836;
+  height: 836px;
   -o-object-fit: contain;
      object-fit: contain;
 }
@@ -1234,8 +1252,8 @@ template {
     content: "";
     position: relative;
     top: -29px;
-    left: 0;
-    width: 100%;
+    left: -10%;
+    width: 121%;
     height: 1px;
     background-color: #e3e3e3;
     display: block;
@@ -1280,7 +1298,7 @@ template {
   margin: 25px 0 0;
 }
 
-@media screen and (max-width: 880px) {
+@media screen and (max-width: 1330px) {
   .bikes__nav {
     display: none;
   }
@@ -1326,7 +1344,11 @@ template {
   display: none;
 }
 
-@media screen and (max-width: 880px) {
+.bikes__card-container .bikes__card-title_theme_dark {
+  color: #151515;
+}
+
+@media screen and (max-width: 1330px) {
   .bikes__card-container {
     display: block;
   }
@@ -1451,6 +1473,10 @@ template {
   color: #fff;
 }
 
+.bikes__select-bikes_theme_dark option {
+  color: #000;
+}
+
 /* Training */
 .training {
   padding: 132px 120px 120px;
@@ -1572,7 +1598,7 @@ template {
   }
 }
 
-.footer_title {
+.footer__title {
   font: 600 24px/32px "Inter", Helvetica, Arial, sans-serif;
   max-width: 229px;
   margin: 0 0 50px;
@@ -1645,6 +1671,7 @@ template {
 .form__input-container {
   position: relative;
   width: 360px;
+  border: none;
 }
 
 @media screen and (max-width: 396px) {

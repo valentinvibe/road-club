@@ -44,3 +44,10 @@ $bg-btn-secondary: #545454;
 $radius: 20px;
 $p-theme-dark: #707070;
 $border-section: #e3e3e3;
+
+/* Mixins */
+
+@mixin alignment($justify,$align) {
+  justify-content: $justify;
+  align-items: $align;
+}

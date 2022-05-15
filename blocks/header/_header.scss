@@ -1,8 +1,7 @@
 .header {
   min-height: 74px;
   display: flex;
-  align-items: center;
-  justify-content: flex-end;
+  @include alignment(flex-end,center);
   padding-right: 120px;
 }
 

@@ -7,10 +7,10 @@
   height: 300px;
   background-color: #fff;
   filter: drop-shadow(-20px 60px 220px rgba(0, 0, 0, 0.2));
+  box-shadow: -20px 60px 220px rgba(0, 0, 0, 0.44);
   border-radius: $radius;
   display: flex;
-  justify-content: center;
-  align-items: center;
+  @include alignment(center,center);
   z-index: 2;
   margin-left: 50px;
   background-color: $bg-color;
@@ -19,7 +19,7 @@
 @media screen and (max-width:1000px) {
   .description__bike-fix {
     margin: 0;
-    height: auto;
+    height: 0;
     width: 100%;
     padding: calc((160px - 138px)/2) calc((234px - 180px)/2);
 

@@ -16,6 +16,7 @@
 @import "../blocks/header/__mobile-menu/_active/_header__mobile-menu_active";
 /* Theme Dark */
 @import "../blocks/header/__link/_theme/_header__link_theme_dark";
+@import "../blocks/header/__mobile-menu/_theme/_header__mobile-menu_theme_dark";
 
 /* Burger Menu */
 @import "../blocks/burger/_burger";
@@ -128,7 +129,7 @@
 /* Footer */
 
 @import "../blocks/footer/_footer";
-@import "../blocks/footer/_title/_footer_title";
+@import "../blocks/footer/__title/_footer__title";
 @import "../blocks/footer/__about-container/_footer__about-container";
 @import "../blocks/footer/__author/_footer__author";
 @import "../blocks/switch/_switch";
