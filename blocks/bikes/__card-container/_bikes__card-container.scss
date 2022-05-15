@@ -2,7 +2,11 @@
   display: none;
 }
 
-@media screen and (max-width: 880px) {
+.bikes__card-container .bikes__card-title_theme_dark {
+  color: $color-primary;
+}
+
+@media screen and (max-width: 1330px) {
   .bikes__card-container {
     display: block;
   }

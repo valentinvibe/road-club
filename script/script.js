@@ -225,7 +225,7 @@ const menuMobile = document.querySelector('.header__mobile-menu'),
       links = menuMobile.querySelector('.header__links'),
       switcher = document.querySelector('.theme-switcher'),
       bikesNav = document.querySelectorAll('.bikes__nav-item'),
-      cards = document.querySelectorAll('.bikes__card_desktop');
+      cards = document.querySelectorAll('.bikes__card_type_desktop');
 
 function toggleBurger() {
   burgerIcon.classList.toggle('burger__icon_active');
@@ -309,13 +309,31 @@ bikesNav[0].classList.add('bikes__nav-item_active');
 bikesNav.forEach((item,i) => {
   item.addEventListener('click', () => {
     setBikeMenuInactive();
-    bikesNav[item.value].classList.add('bikes__nav-item_active');
+    const itemText = item.textContent;
+    let option;
+
+    switch (itemText) {
+      case "Шоссе": {
+        option = 0;
+        break;
+      }
+      case "Грэвел": {
+        option = 1;
+        break;
+      }
+      case "ТТ": {
+        option = 2;
+        break;
+      }
+    }
+
+    bikesNav[option].classList.add('bikes__nav-item_active');
 
     cards.forEach((card,i) => {
-      card.querySelector('.bikes__card-title').textContent = bikes[item.value].models[i].name;
-      card.href = bikes[item.value].models[i].link;
-      card.querySelector('.bikes__card-image').src = bikes[item.value].models[i].image;
-      card.querySelector('.bikes__card-image').alt = bikes[item.value].models[i].name;
+      card.querySelector('.bikes__card-title').textContent = bikes[option].models[i].name;
+      card.href = bikes[option].models[i].link;
+      card.querySelector('.bikes__card-image').src = bikes[option].models[i].image;
+      card.querySelector('.bikes__card-image').alt = bikes[option].models[i].name;
     })
 
   });

@@ -1,6 +1,5 @@
 .footer__about-container {
   margin: 84px 0 0;
   display: flex;
-  justify-content: space-between;
-  align-items: center;
+  @include alignment(space-between,center);
 }
