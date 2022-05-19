@@ -1,0 +1,11 @@
+.merks__title {
+  margin: 0;
+  font: $merks-title;
+}
+
+@media screen and (max-width:1024px) {
+  .merks__title {
+    font: $merks-title-mobile;
+    letter-spacing: -0.5px;
+  }
+}

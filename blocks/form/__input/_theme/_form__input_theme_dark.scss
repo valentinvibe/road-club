@@ -1,0 +1,23 @@
+.form__input_theme_dark {
+  border-color: rgba(125,125,125, .5);
+  color: $btn-text-color;
+}
+
+.form__input_theme_dark::placeholder {
+  color: $btn-text-color;
+  opacity: .7;
+}
+
+.form__input_theme_dark:hover::placeholder {
+  color: $btn-text-color;
+  opacity: 1;
+}
+
+.form__input_theme_dark:focus {
+  border-color: rgb(125, 125, 125);
+  outline: none;
+}
+
+.form__input_theme_dark:focus::placeholder {
+  color: transparent;
+}

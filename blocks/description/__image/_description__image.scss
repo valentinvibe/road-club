@@ -1,0 +1,17 @@
+.description__image {
+  border: 1px solid #000000;
+  filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
+  border-radius: $radius;
+}
+
+@media screen and (max-width:1000px) {
+  .description__image {
+    width: 64%;
+    border: none;
+    filter: none;
+
+    background-color: $bg-color;
+    padding: 11px 27px;
+    max-width: 234px;
+  }
+}

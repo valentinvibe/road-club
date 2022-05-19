@@ -1,0 +1,12 @@
+.bikes__card-title {
+  font: $card-text;
+  padding-left: 7px;
+}
+
+@media screen and (max-width:880px) {
+  .bikes__card-title {
+    font-size: 14px;
+    margin: 0 auto;
+    text-align: center;
+  }
+}

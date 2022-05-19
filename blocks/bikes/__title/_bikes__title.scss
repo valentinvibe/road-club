@@ -1,0 +1,12 @@
+.bikes__title {
+  margin: 0;
+  padding: 0;
+}
+
+@media screen and (max-width: 879px) {
+  .bikes__title {
+    font: $training-title;
+    letter-spacing: -.5px;
+
+  }
+}

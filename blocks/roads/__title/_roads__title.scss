@@ -1,0 +1,10 @@
+.roads__title {
+  grid-area: title;
+  margin: 0 0 45px;
+}
+
+@media screen and (max-width: 1145px) {
+  .roads__title {
+    margin-bottom: 40px;
+  }
+}

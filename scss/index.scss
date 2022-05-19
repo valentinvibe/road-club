@@ -1,0 +1,147 @@
+@import "../vendor/_normalize";
+@import "../vendor/fonts/_fonts";
+@import "../vendor/_vars";
+@import "../blocks/page/_page";
+/* Theme Dark*/
+@import "../blocks/page/_theme/_page_theme_dark";
+
+/* 1. Header */
+
+@import "../blocks/header/_header";
+@import "../blocks/header/__links/_header__links";
+@import "../blocks/header/__links/_mobile/_header__links_mobile";
+@import "../blocks/header/__link/_header__link";
+
+@import "../blocks/header/__mobile-menu/_header__mobile-menu";
+@import "../blocks/header/__mobile-menu/_active/_header__mobile-menu_active";
+/* Theme Dark */
+@import "../blocks/header/__link/_theme/_header__link_theme_dark";
+@import "../blocks/header/__mobile-menu/_theme/_header__mobile-menu_theme_dark";
+
+/* Burger Menu */
+@import "../blocks/burger/_burger";
+@import "../blocks/burger/__icon/_burger__icon";
+@import "../blocks/burger/__icon/_active/_burger__icon_active";
+@import "../blocks/burger/__icon/_theme/burger__icon_theme_dark";
+
+/* Theme Switcher */
+@import "../blocks/theme-switcher/_theme-switcher";
+@import "../blocks/theme-switcher/__btn-switch/_theme-switcher__btn-switch";
+@import "../blocks/theme-switcher/__theme-icon/_theme-switcher__theme-icon";
+@import "../blocks/theme-switcher/_place/_theme-switcher_place_menu";
+@import "../blocks/theme-switcher/_place/theme-switcher_place_footer";
+
+/* Content */
+@import "../blocks/content/_content";
+/* Theme Dark*/
+@import "../blocks/content/_theme/_content_theme_dark";
+
+/* Section Title*/
+@import "../blocks/section-title/_section-title";
+
+/* Section Description */
+@import "../blocks/section-description/_section-description";
+/* Theme Dark*/
+@import "../blocks/section-description/_theme/_section-description_theme_dark";
+
+/* Description */
+
+@import "../blocks/description/_description";
+@import "../blocks/description/__title/_description__title";
+@import "../blocks/description/__subtitle/_description__subtitle";
+@import "../blocks/description/__btn/_description__btn";
+@import "../blocks/description/__paragraph/_description__paragraph";
+@import "../blocks/description/__bike-fix/_description__bike-fix";
+@import "../blocks/description/__image/_description__image";
+@import "../blocks/description/__illustration/_description__illustration";
+/* Theme Dark*/
+@import "../blocks/description/__image/_theme/_description__image_theme_dark";
+@import "../blocks/description/__paragraph/_theme/_description__paragraph_theme_dark";
+
+/* Merks */
+
+@import "../blocks/merks/_merks";
+@import "../blocks/merks/__image/_merks__image";
+@import "../blocks/merks/__content-container/_merks__content-container";
+@import "../blocks/merks/__title/_merks__title";
+@import "../blocks/merks/__about/_merks__about";
+@import "../blocks/merks/__author/_merks__author";
+@import "../blocks/merks/__prof/_merks__prof";
+/* Theme Dark */
+@import "../blocks/merks/__prof/_theme/_merks__prof_theme_dark";
+
+/* Roads */
+
+@import "../blocks/roads/_roads";
+@import "../blocks/roads/__title/_roads__title";
+@import "../blocks/roads/__subtitle/_roads__subtitle";
+
+/* Slider */
+@import "../blocks/slider/_slider";
+@import "../blocks/slider/__slides/_slider__slides";
+@import "../blocks/slider/__slide/_slider__slide";
+@import "../blocks/slider/__slide-image/_slider__slide-image";
+@import "../blocks/slider/__slide-sticker/_slider__slide-sticker";
+@import "../blocks/slider/__nav/_slider__nav";
+@import "../blocks/slider/__btn/_slider__btn";
+@import "../blocks/slider/__btn/_type/_slider__btn_type_prev";
+@import "../blocks/slider/__btn/_type/_slider__btn_type_next";
+/* Theme Dark */
+@import "../blocks/slider/__btn/_theme/_slider__btn_theme_dark";
+@import "../blocks/bikes/__image-container/_theme/_bikes__image-container_theme_dark";
+
+/* Bikes */
+
+@import "../blocks/bikes/_bikes";
+@import "../blocks/bikes/__header/_bikes__header";
+@import "../blocks/bikes/__title/_bikes__title";
+@import "../blocks/bikes/__nav/bikes__nav";
+@import "../blocks/bikes/__nav-item/_bikes__nav-item";
+@import "../blocks/bikes/__nav-item/_active/_bikes__nav-item_active";
+@import "../blocks/bikes/__content/_bikes__content";
+@import "../blocks/bikes/__card-container/_bikes__card-container";
+@import "../blocks/bikes/__select-bikes/_bikes__select-bikes";
+@import "../blocks/bikes/__dots/_bikes__dots";
+@import "../blocks/bikes/__dot/_bikes__dot";
+@import "../blocks/bikes/__dot/_active/_bikes__dot_active";
+@import "../blocks/bikes/__card/_bikes__card";
+@import "../blocks/bikes/__image-container/_bikes__image-container";
+@import "../blocks/bikes/__card-image/_bikes__card-image";
+@import "../blocks/bikes/__card-title/_bikes__card-title";
+/* Theme Dark */
+@import "../blocks/bikes/__nav-item/_theme/_bikes__nav-item_theme_dark";
+@import "../blocks/bikes/__card-title/_theme/_bikes__card-title_theme_dark";
+@import "../blocks/bikes/__select-bikes/_theme/_bikes__select-bikes_theme_dark";
+
+
+/* Training */
+
+@import "../blocks/training/_training";
+@import "../blocks/training/__title/_training__title";
+@import "../blocks/training/__subtitle/_training__subtitle";
+@import "../blocks/training/__list/_training__list";
+@import "../blocks/training/__list-item/_training__list-item";
+@import "../blocks/training/__link/training__link";
+@import "../blocks/training/__illustration/_training__illustration";
+/* Theme dark */
+@import "../blocks/training/__link/_theme/_training__link_theme_dark";
+
+/* Footer */
+
+@import "../blocks/footer/_footer";
+@import "../blocks/footer/__title/_footer__title";
+@import "../blocks/footer/__about-container/_footer__about-container";
+@import "../blocks/footer/__author/_footer__author";
+@import "../blocks/switch/_switch";
+@import "../blocks/footer/__logo/footer__logo";
+/* Theme Dark*/
+@import "../blocks/footer/_theme/_footer_theme_dark";
+
+/* Form */
+
+@import "../blocks/form/_form";
+@import "../blocks/form/__input-container/_form__input-container";
+@import "../blocks/form/__input/_form__input";
+@import "../blocks/form/__submit-btn/_form__submit-btn";
+/* Theme Dark */
+@import "../blocks/form/__input/_theme/_form__input_theme_dark";

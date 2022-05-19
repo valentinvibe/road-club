@@ -1,0 +1,10 @@
+.section-title {
+  font: $text-title;
+}
+
+@media screen and (max-width:1145px) {
+  .section-title {
+    font: $text-title-mobile;
+    width: 62%;
+  }
+}

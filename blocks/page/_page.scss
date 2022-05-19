@@ -1,0 +1,11 @@
+.page {
+  max-width: 1440px;
+  margin: auto;
+  background: $bg-color;
+}
+
+@media screen and (max-width: 560px) {
+  .page {
+    max-width: 100%;
+  }
+}

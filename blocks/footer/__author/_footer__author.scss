@@ -1,0 +1,12 @@
+.footer__author {
+  font: $footer-author;
+  color: $author;
+  margin: 0;
+}
+
+@media screen and (max-width: 560px) {
+  .footer__author {
+    font: $footer-author-mobile;
+    margin-top: 11px;
+  }
+}

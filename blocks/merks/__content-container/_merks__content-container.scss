@@ -1,0 +1,12 @@
+.merks__content-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding-bottom: 5px;
+}
+
+@media screen and (max-width: 1145px) {
+  .merks__content-container {
+    padding-top: 41px;
+  }
+}

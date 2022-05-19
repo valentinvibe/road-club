@@ -1,0 +1,5 @@
+.theme-switcher {
+  display: none;
+  column-gap: 22px;
+  @include alignment(center,center);
+}

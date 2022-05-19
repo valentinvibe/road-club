@@ -1,0 +1,27 @@
+.bikes {
+  padding: 60px 120px;
+}
+
+@media screen and (max-width:880px) {
+  .bikes {
+    padding: 65px 18px 79px;
+
+    display: flex;
+    margin: 0 auto;
+    flex-direction: column;
+    align-items: center;
+  }
+}
+
+@media screen and (max-width:1145px) {
+  .bikes::before {
+    content: "";
+    position: relative;
+    top: -29px;
+    left: -10%;
+    width: 121%;
+    height: 1px;
+    background-color: #e3e3e3;
+    display: block;
+  }
+}

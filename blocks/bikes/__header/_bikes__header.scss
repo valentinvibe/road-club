@@ -1,0 +1,10 @@
+.bikes__header {
+  display: flex;
+  justify-content: space-between;
+}
+
+@media screen and (max-width: 450px) {
+  .bikes__header {
+    align-self: flex-start;
+  }
+}

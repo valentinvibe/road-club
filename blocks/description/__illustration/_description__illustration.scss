@@ -1,0 +1,18 @@
+.description__illustration {
+  grid-area: image;
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  width: 610px;
+  height: 836px;
+  object-fit: contain;
+}
+
+@media screen and (max-width:1000px) {
+  .description__illustration {
+    position: relative;
+    width: 254px;
+    height: 348px;
+    justify-self: flex-end;
+  }
+}

@@ -1,0 +1,30 @@
+.description {
+  padding: 0 0 79px 120px;
+  min-height: 856px;
+  position: relative;
+  box-sizing: border-box;
+  display: grid;
+  grid-template-rows: repeat(4, min-content);
+  grid-template-columns: 460px auto;
+  grid-template-areas:
+  "title		bike-fix"
+  "subtitle	bike-fix"
+  "button		bike-fix"
+  "paragraph	bike-fix";
+}
+
+@media screen and (max-width: 1000px) {
+  .description {
+    grid-template-columns: 100%;
+    grid-template-rows: 120px 334px 12px 151px 50px;
+    grid-template-areas:
+        "title"
+        "image"
+        "bike-fix"
+        "subtitle"
+        "button";
+    padding: 40px 18px;
+    min-height: fit-content;
+  };
+
+}

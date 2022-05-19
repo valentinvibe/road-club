@@ -1,0 +1,8 @@
+.bikes__nav-item_active {
+  font: $text-main-active;
+  color: $color-primary;
+}
+
+.bikes__nav-item_active:hover {
+  opacity: .75;
+}

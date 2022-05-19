@@ -1,0 +1,53 @@
+/* Fonts */
+
+$header-link: 500 14px/18px 'Inter', Helvetica, Arial, sans-serif;
+$text-title: 700 55px/60px 'Inter', Helvetica, Arial, sans-serif;
+$text-main: 400 18px/28px 'Inter', Helvetica, Arial, sans-serif;
+$text-main-active: 600 18px/28px 'Inter', Helvetica, Arial, sans-serif;
+$btn-text: 600 14px/18px 'Inter', Helvetica, Arial, sans-serif;
+$paragraph: 400 18px/18px 'Inter', Helvetica, Arial, sans-serif;
+$merks-title: 600 34px/44px 'Inter', Helvetica, Arial, sans-serif;
+$merks-author: 500 20px/32px 'Inter', Helvetica, Arial, sans-serif;
+$merks-prof: 400 16px/28px 'Inter', Helvetica, Arial, sans-serif;
+$card-text: 600 18px/22px 'Inter', Helvetica, Arial, sans-serif;
+$footer-title: 600 24px/32px 'Inter', Helvetica, Arial, sans-serif;
+$form-input: 500 13px/28px 'Inter', Helvetica, Arial, sans-serif;
+$footer-author: 600 14px/20px 'Inter', Helvetica, Arial, sans-serif;
+$text-main-mobile: 400 12px/18px 'Inter', Helvetica, Arial, sans-serif;
+$text-title-mobile: 700 32px/40px 'Inter', Helvetica, Arial, sans-serif;
+$merks-title-mobile: 600 23px/29px 'Inter', Helvetica, Arial, sans-serif;
+$merks-author-mobile: 500 14px/22px 'Inter', Helvetica, Arial, sans-serif;
+$merks-prof-mobile: 400 10px/16px 'Inter', Helvetica, Arial, sans-serif;
+$training-title: 700 32px/40px 'Inter', Helvetica, Arial, sans-serif;
+$training-link: 600 14px/20px 'Inter', Helvetica, Arial, sans-serif;
+$footer-author-mobile: 500 14px/20px 'Inter', Helvetica, Arial, sans-serif;
+$bikes-select: 600 11px/14px 'Inter', Helvetica, Arial, sans-serif;
+
+/* Colors */
+$color-primary: #151515;
+$bg-color: #f4f4f4;
+$color-secondary: rgba(34,34,34,.7);
+$btn-bg: #24b47e;
+$btn-bg-hover: #319e75;
+$btn-text-color: #fff;
+$slider-btn: #ebebeb;
+$bg-footer: #efefef;
+$author: #cfcfcf;
+$bg-theme-dark: #333;
+$desc-theme-dark: rgba(229,229,229, .7);
+$btn-bg-theme-dark: #434343;
+$bg-color-theme-dark: #2f2f2f;
+$bg-btn-secondary: #545454;
+
+/* Decorates */
+
+$radius: 20px;
+$p-theme-dark: #707070;
+$border-section: #e3e3e3;
+
+/* Mixins */
+
+@mixin alignment($justify,$align) {
+  justify-content: $justify;
+  align-items: $align;
+}

@@ -1,0 +1,10 @@
+.bikes__nav-item {
+  font: $text-main;
+  color: $color-secondary;
+  transition: opacity .3s;
+}
+
+.bikes__nav-item:hover {
+  cursor: pointer;
+  opacity: .6;
+}

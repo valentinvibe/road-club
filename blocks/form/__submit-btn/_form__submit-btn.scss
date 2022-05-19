@@ -1,0 +1,11 @@
+.form__submit-btn {
+  display: none;
+  position: absolute;
+  right: 22px;
+  top: 11px;
+  border: none;
+  cursor: pointer;
+  font: $form-input;
+  background-color: transparent;
+  color: inherit;
+}

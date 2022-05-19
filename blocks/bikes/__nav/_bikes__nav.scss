@@ -1,0 +1,12 @@
+.bikes__nav {
+  display: flex;
+  list-style-type: none;
+  column-gap: 40px;
+  margin: 25px 0 0;
+}
+
+@media screen and (max-width:1330px) {
+  .bikes__nav {
+    display: none;
+  }
+}

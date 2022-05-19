@@ -1,0 +1,13 @@
+.bikes__card-image {
+  width: 340px;
+  height: 340px;
+  margin: auto;
+}
+
+@media screen and (max-width: 880px) {
+  .bikes__card-image {
+    width: 100%;
+    height: 100%;
+    margin: 0;
+  }
+}

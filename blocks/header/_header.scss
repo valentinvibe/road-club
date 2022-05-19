@@ -1,0 +1,13 @@
+.header {
+  min-height: 74px;
+  display: flex;
+  @include alignment(flex-end,center);
+  padding-right: 120px;
+}
+
+@media screen and (max-width: 560px) {
+  .header {
+    padding: 0;
+    align-items: flex-start;
+  }
+}

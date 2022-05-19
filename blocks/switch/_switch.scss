@@ -1,0 +1,7 @@
+.switch, .switch::before {
+  background: $bg-btn-secondary;
+}
+
+.switch::after {
+  left: 22px;
+}
